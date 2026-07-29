@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF=8">
+    <title>第79回修猷大運動会特設HP</title>
+    <meta name="description" content="第79回修猷大運動会の特設ホームページです。">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+    <header class="header-style">
+        <a class="rokkousei" href="https://shuyu.fku.ed.jp/">
+            <img src="image/r08_undou_001_rokkousei.png">
+        </a>
+        <p class="header-title">第79回修猷大運動会特設HP</p>
+    </header>
+    <main>
+        <a href="#" id="page_top"></a>
+        <div class="main-header" id="top">
+            <div class="daiji">
+                <img src="">
+            </div>
+            <div class="day">
+                <p>令和8年9月5日(土)
+                    <br>
+                    <small><small>予備日 9/6(日)</small></small>
+                </p>
+            </div>
+            <div class="time-container">
+                <p class="date-midashi">開催<br>まで</p>
+                <div class="time-element">
+                    <div class="time"><span id="day"></span></div>
+                    <div class="timelog">
+                        <p>日</p>
+                    </div>
+                </div>
+                <p class="colon">：</p>
+                <div class="time-element">
+                    <div class="time"><span id="hour"></span></div>
+                    <div class="timelog">
+                        <p>時間</p>
+                    </div>
+                </div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+
+                        const countdownWrapper = document.querySelector(".countdown");
+
+                        const day = document.getElementById("day");
+                        const hour = document.getElementById("hour");
+                        const min = document.getElementById("min");
+                        const sec = document.getElementById("sec");
+
+                        const target = new Date(2026, 8, 5, 8, 0, 0);
+                        let timerId;
+
+                        function update() {
+                            const now = new Date();
+                            const diff = target - now;
+
+                            if (diff <= 0) {
+                                clearTimeout(timerId);
+                                if (countdownWrapper) countdownWrapper.style.display = "none";
+                                return;
+                            }
+
+                            const d = Math.floor(diff / 86400000);
+                            const h = Math.floor(diff / 3600000) % 24;
+                            const m = Math.floor(diff / 60000) % 60;
+                            const s = Math.floor(diff / 1000) % 60;
+
+                            day.textContent = String(d).padStart(2, "0");
+                            hour.textContent = String(h).padStart(2, "0");
+                            min.textContent = String(m).padStart(2, "0");
+                            sec.textContent = String(s).padStart(2, "0");
+
+                            const delay = 1000 - (Date.now() % 1000);
+                            timerId = setTimeout(update, delay);
+                        }
+
+                        update();
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="button">
+            <div class="button-text">表示したい項目をタップまたはクリックで表示</div>
+            <div class="button-container">
+                <div class="nekketsu button2">スローガン紹介</div>
+                <div class="message button1">大運動会によせて</div>
+                <div class="program button2">プログラム</div>
+                <div class="blockpage button1">ブロック紹介</div>
+                <div class="match button2">競技</div>
+                <div class="map button1">マップ・会場図</div>
+            </div>
+        </div>
+        <div class="nekketsu-page page">
+            <h1 class="section-midashi">スローガン紹介</h1>
+            <div class="nekketsu-image">
+                <img src="">
+            </div>
+            <div class="nekketsu-text">
+                <p>
+                    熱結とは、大運動会にかける修猷生の熱い思いを一つにすること。修猷生一人一人が胸に宿す大運動会への熱い思いを語り合い、ぶつけ合い、高め合い、大運動会へ団結する。そうして全員が一丸となった先に見える景色は修猷生の心に刻み込まれる。修猷生が「熱結」すれば、これまでの大運動会を凌駕するような大運動会を創り上げることができる。
+                </p>
+            </div>
+        </div>
+        <div class="message-page page">
+            <h1 class="section-midashi">大運動会によせて</h1>
+            <div class="kantogen-box">
+                <img class="kantogen-photo" src="/image/r08_undou_004_kancho.jpg" alt="館長の写真">
+                <div class="kantogen-text">
+                    <span class="name">野本準二</span>
+                    <span class="yakushoku">館長</span>
+                    <br>
+                    <p>
+                        今年もやって来た。修猷生の、修猷生による、修猷生のための大運動会。「修猷生のための」とは言っても、君たちのひたむきな姿、その熱量、その一途さが、誰かの希望に光を与え、誰かの一歩に力を添えることができるのならば、この大運動会は更に大きな意義を持つ。<br>
+                        人は、器用に効率よく物事を進める人を羨むことはあっても、心を強く揺さぶられることは少ない。私たちが心を動かされるのは、失敗を恐れず挑戦を続ける人、泥臭くとも全力を尽くす人に対してだ。「本気であること」「一生懸命であること」は、本校が大切にしてきた誇りだ。私たちを成長させ、人と人とを結び、未来を切り拓く力となる。<br>
+                        君たちの熱が、結実する瞬間を待っている。
+                    </p>
+                </div>
+            </div>
+
+            <div class="kantogen-box">
+                <img class="kantogen-photo-soumu" src="/image/r08_undou_004_kancho.jpg" alt="運営委員長の写真">
+                <div class="kantogen-text-soumu">
+                    <span class="name">浦野子虎</span>
+                    <span class="yakushoku">総務</span>
+                    <br>
+                    <p class="soumu">
+                        修猷の夏は長い<br>
+                        いや、修猷には夏しかないのかもしれない<br>
+                        仲間と語り合い時代に挑み伝統を繋いできた<br>
+                        今日は修猷の誕生日<br>
+                        情動に薪を焚べろ<br>
+                        燃え尽きたっていい<br>
+                        修猷にも日本にも収まらない<br>
+                        何よりも広い俺たちの頭の中で想像しろ<br>
+                        勝利に手が届くところを<br>
+                        感激に満つ青春を<br>
+                        根拠なき自信は現実となる<br>
+                        あいつが目指す熱結がそこにある<br>
+                        最高に暑いこの今日<br>
+                        楽しかったで終わらせるつもりなどない<br>
+                        煮えたぎる俺らの脳<br>
+                        俺等はただのお勉強集団なんかじゃない<br>
+                        生み出すのは歴代最高<br>
+                        修猷の誇りを見せつける瞬間が来た<br>
+                        いざ立て奮えわが友よ<br>
+                        いざ立て叫べわが友よ<br>
+                        物語を紡ぐのは誰だ<br>
+                        一千の健児ここに在り
+                    </p>
+                </div>
+            </div>
+            <div class="kantogen-box">
+                <img class="kantogen-photo" src="/image/r08_undou_004_kancho.jpg" alt="運営委員長の写真">
+                <div class="kantogen-text">
+                    <span class="name">筒井和翔</span>
+                    <span class="yakushoku">運営委員長</span>
+                    <br>
+                    <p>
+                        第79回大運動会。修猷館で一番熱い日が始まる。<br>
+                        今年で79回目となる歴史ある修猷大運動会に今日、我々が新たな歴史を刻む。時代が流れるにつれ、修猷大運動会に向けられる視線も変わりつつある。しかし、修猷大運動会の歴史は、伝統は、今日まで絶えることなく紡がれてきた。そして今、我々が新たな時代の担いとして、修猷大運動会に臨む。結団式から2ヶ月、正規練開始から2週間、大運動会に向けて我々が積み上げてきたものに確かな自信を持とう。これまでの大運動会を凌駕する大運動会を今日、完成させよう。<br>
+                        修猷生、「熱結」しよう。最高の大運動会へ。今、共に。
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="program-page page">
+            <h1 class="section-midashi">プログラム</h1>
+            <p class="program-caution">
+                プログラムは当日の天候によって変更となる場合があります。<br>
+                最新の情報はこのHPで公開しております。
+            </p>
+            <div class="program-container">
+                <div class="program-line-1">
+                    <div class="program-box">
+                        <p class="program-chousei">プログラム</p>
+                        <p class="program-chousei">開始時間</p>
+                    </div>
+                    <div class="program-box">
+                        <p class="program-chousei">開会式</p>
+                        <p class="program-chousei">8:00</p>
+                    </div>
+                    <div class="program-box">
+                        <p class="program-chousei">陸上α</p>
+                        <p class="program-chousei">8:25</p>
+                    </div>
+                    <div class="program-box">
+                        <p class="program-chousei">棒引き 予選</p>
+                        <p class="program-chousei">8:43</p>
+                    </div>
+                    <div class="program-box">
+                        <p class="program-chousei">タンブリング</p>
+                        <p class="program-chousei">8:55</p>
+                    </div>
+                    <div class="program-box">
+                        <p class="program-chousei">大帽走</p>
+                        <p class="program-chousei">9:32</p>
+                    </div>
+                    <div class="program-box">
+                        <p class="program-chousei">棒倒し 予選</p>
+                        <p class="program-chousei">9:49</p>
+                    </div>
+                    <div class="program-box">
+                        <p class="program-chousei">創作ダンス</p>
+                        <p class="program-chousei">10:01</p>
+                    </div>
+                    <div class="program-box">
+                        <p class="program-chousei">綱引き 予選</p>
+                        <p class="program-chousei">10:28</p>
+                    </div>
+                    <div class="program-box">
+                        <p class="program-chousei">騎馬戦 予選</p>
+                        <p class="program-chousei">10:57</p>
+                    </div>
+                    <div class="program-box">
+                        <p class="program-chousei">エール</p>
+                        <p class="program-chousei">11:14</p>
+                    </div>
+                </div>
+                <div class="program-line-2">
+                    <div class="program-box">
+                        <p class="program-chousei">１昼</p>
+                        <p class="program-chousei">11:45</p>
+                    </div>
+                    <div class="program-box">
+                        <p class="program-chousei">中間発表</p>
+                        <p class="program-chousei">12:34</p>
+                    </div>
+                    <div class="program-box">
+                        <p class="program-chousei oukonchousei">応援コンテスト</p>
+                        <p class="program-chousei">12:35</p>
+                    </div>
+                    <div class="program-box">
+                        <p class="program-chousei">騎馬戦 決勝</p>
+                        <p class="program-chousei">13:22</p>
+                    </div>
+                    <div class="program-box">
+                        <p class="program-chousei">綱引き 決勝</p>
+                        <p class="program-chousei">13:44</p>
+                    </div>
+                    <div class="program-box">
+                        <p class="program-chousei">２昼</p>
+                        <p class="program-chousei">13:59</p>
+                    </div>
+                    <div class="program-box">
+                        <p class="program-chousei">陸上β</p>
+                        <p class="program-chousei">14:32</p>
+                    </div>
+                    <div class="program-box">
+                        <p class="program-chousei">棒引き 決勝</p>
+                        <p class="program-chousei">14:59</p>
+                    </div>
+                    <div class="program-box">
+                        <p class="program-chousei">棒倒し 決勝</p>
+                        <p class="program-chousei">15:13</p>
+                    </div>
+                    <div class="program-box">
+                        <p class="program-chousei">陸上γ</p>
+                        <p class="program-chousei">15:25</p>
+                    </div>
+                    <div class="program-box">
+                        <p class="program-chousei">閉会式</p>
+                        <p class="program-chousei">15:40</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blockpage-page page">
+            <h1 class="section-midashi">ブロック紹介</h1>
+            <div class="block-red">
+                <h2 class="block-title red">
+                    RED
+                </h2>
+                <p class="block-class">
+                    3-4 3-9 2-2 2-8 2-10 1-1 1-4 1-10
+                </p>
+                <div class="blockreader-introduction block-theme">
+                    <p>
+                        俺たちはどんな困難も乗り越えてきた。俺たちの、俺たちにしかできない歴代最高、その真価を示す時だ。夢を持て、貪欲になれ、全てを凌駕せよ。俺たちのかけがえのない青春が、今日大運動会を赤く染める。
+                    </p>
+                    <p class="blockreader-name">ブロック長 3-4 原口宙斗</p>
+                </div>
+                <img class="back-1st" src="">
+                <div class="block-theme">
+                    <h2 class="slogan-block">
+                        <ruby>爀越<rt>かくえつ</rt></ruby>
+                    </h2>
+                    <div class="slogan-text">
+                        このスローガンには「赤ブロック全員でどんな困難も乗り越えていく」という意味が込められている。世の中のあらゆるものが廃れて淘汰されていく時代。『
+                        確越』
+                        歴代最高にふさわしい大運動会を必ず創り上げる。
+                    </div>
+                </div>
+                <div class="block-theme">
+                    <h2 class="slogan-tanb">
+                        <ruby>熾拳<rt>れっけん</rt></ruby>
+                    </h2>
+                    <div class="slogan-text">
+                        自ら道を切り拓かずとも、誰かや何かの光で生きられるこの時代。その中でおれたちがタンブリングをする意味。「熾拳」には、何も持たず己の力だけで挑む「赤手空拳」の精神を込めた。燃え盛る炎のような情熱と揺るがぬ闘志を胸に、仲間とともに限界を超え、道なき世界を紅創し、切り拓く。赤ブロ男児の勇姿をご覧あれ。
+                    </div>
+                </div>
+                <div class="block-theme">
+                    <h2 class="slogan-dance">
+                        <ruby>百火繚乱<rt>ひゃっかりょうらん</rt></ruby>
+                    </h2>
+                    <div class="slogan-text">
+                        私たちは今、自分の個性を隠し仮面を被って生きているのではないか。評価や比較に左右される現代では、本当の自分をさらけ出すのは確かに怖い。でも忘れてはいけない。誰もが唯一無二の個性を持っている。また周りを見れば、自分を受け入れてくれる人は必ずいる。さあ、私たちが個性を輝かせる番だ。ありのままの自分を愛し、自分だけの炎を灯そう。
+                    </div>
+                </div>
+                <div class="block-theme">
+                    <h2 class="slogan-back">
+                        <ruby>竜爀烈天<rt>りゅうかくれってん</rt></ruby>
+                    </h2>
+                    <div class="slogan-text">
+                        恐竜とは力強い生命の象徴だ。恐竜は個々に強みを持っており、進化を繰り返して地球を支配し続けた。竜爀烈天とは、恐竜の持つ燃え盛る力強さを表す4文字である。一人一人が個々の強さをもとに熱を生み、その熱が力強い一歩を生む。それはやがて、赤ブロックを頂点へと連れて行く。その到達の爆発的な喜びを、咆哮を上げる恐竜の姿に重ねている。
+                    </div>
+                </div>
+                <div class="block-theme">
+                    <h2 class="slogan-oukon">
+                        <ruby>衆熾成城<rt>しゅうしせいじょう</rt></ruby>
+                    </h2>
+                    <div class="slogan-text">
+                        自ら道を切り拓かずとも、誰かや何かの光で生きられるこの時代。その中でおれたちがタンブリングをする意味。「熾拳」には、何も持たず己の力だけで挑む「赤手空拳」の精神を込めた。燃え盛る炎のような情熱と揺るがぬ闘志を胸に、仲間とともに限界を超え、道なき世界を紅創し、切り拓く。赤ブロ男児の勇姿をご覧あれ。
+                    </div>
+                </div>
+            </div>
+            <div class="block-white">
+                <h2 class="block-title white">
+                    WHITE
+                </h2>
+                <p class="block-class">
+                    3-1 3-5 3-6 2-1 2-3 2-4 1-5 1-9 1-11
+                </p>
+                <div class="blockreader-introduction block-theme">
+                    <p>
+                        俺たち白ブロックは、苦しい、辛い壁を全員で乗り越える。そして優勝、成長、最高の思い出、全て手に入れる。この夏に、自分の持てる力全てをぶつけ、修猷大運動会の主役になる。俺たちが最強だと証明しよう。
+                    </p>
+                    <p class="blockreader-name">ブロック長 3-6 中岡颯太</p>
+                </div>
+                <img class="back-1st" src="">
+                <div class="block-theme">
+                    <h2 class="slogan-block">
+                        <ruby>皡炎<rt>こうえん</rt></ruby>
+                    </h2>
+                    <div class="slogan-text">
+                        炎は温度が上がれば上がるほど、白い色に近づく。自分の熱を極限まで上げて、燦然たる皡い炎で、全てを燃やし尽くそう。そして歴代の運動会を超えて俺たちだけの最高の景色を新たに創ろう。
+                    </div>
+                </div>
+                <div class="block-theme">
+                    <h2 class="slogan-tanb">
+                        <ruby>穿雲雄翔<rt>せんうんゆうしょう</rt></ruby>
+                    </h2>
+                    <div class="slogan-text">
+                        「穿雲」とは困難を打ち破り、過去最高のタンブリングを歴史に刻む決意である。時代がタンブを淘汰しつつある今だからこそ、俺たち自身が時代を創っていく覚悟を示す。不屈の努力を積み重ねた者だけが見える景色がある。その高みへと力強く「飛翔」し、「優勝」を掴み取る。白の漢達が今、白翼を翻す。
+                    </div>
+                </div>
+                <div class="block-theme">
+                    <h2 class="slogan-dance">
+                        咲き継ぐ白百合<br><small><small>~潜伏キリシタン250年の軌跡~</small></small>
+                    </h2>
+                    <div class="slogan-text">
+                        250年の弾圧を耐え抜き次世代へ願いを託した潜伏キリシタンの少女たち。厳しい冬を越え春に咲く白百合のように、いつか堂々と生きられる日を信じ続けた姿を表現します。どんな困難が立ちはばかっても希望を失わず生き抜く強さ、自分の信じるものを大切にする尊さ、自由を手に入れ、自分らしく生きられる喜びを伝えます。
+                    </div>
+                </div>
+                <div class="block-theme">
+                    <h2 class="slogan-back">
+                        <ruby>百花黎明<rt>ひゃっかれいめい</rt></ruby>
+                    </h2>
+                    <div class="slogan-text">
+                        モチーフの牡丹は百花の王と呼ばれ、力強く花開く姿に白ブロック全員の個性や才能が鮮やかに咲き誇る姿を重ねた。黎明は新しい時代の幕開けを意味し、伝統を表す黒の獅子は、革新を表す白い獅子へと受け継がれ、その魂は新たな時代の中で生き続ける。私たち白ブロックは伝統を受け継ぎ、挑戦を恐れず、革新し続ける。その信念をここに刻む。
+                    </div>
+                </div>
+                <div class="block-theme">
+                    <h2 class="slogan-oukon">
+                        <ruby>皎証<rt>こうしょう</rt></ruby>
+                    </h2>
+                    <div class="slogan-text">
+                        「穿雲」とは困難を打ち破り、過去最高のタンブリングを歴史に刻む決意である。時代がタンブを淘汰しつつある今だからこそ、俺たち自身が時代を創っていく覚悟を示す。不屈の努力を積み重ねた者だけが見える景色がある。その高みへと力強く「飛翔」し、「優勝」を掴み取る。白の漢達が今、白翼を翻す。
+                    </div>
+                </div>
+            </div>
+            <div class="block-blue">
+                <h2 class="block-title blue">
+                    BLUE
+                </h2>
+                <p class="block-class">
+                    3-3 3-7 3-8 2-5 2-9 1-6 1-7 1-8
+                </p>
+                <div class="blockreader-introduction block-theme">
+                    <p>
+                        目指すは完全優勝。どんなときも俺についてこい。
+                    </p>
+                    <p class="blockreader-name">ブロック長 3-3 黒澤生真</p>
+                </div>
+
+                <img class="back-1st" src="">
+                <div class="block-theme">
+                    <h2 class="slogan-block">
+                        <ruby>真濤<rt>しんどう</rt></ruby>
+                    </h2>
+                    <div class="slogan-text">
+                        大運動会を通してブロック全員が真の自分の姿を見つけ出し、これまでより大きな力を出せば、それは大きな濤となり青に染める。
+                    </div>
+                </div>
+                <div class="block-theme">
+                    <h2 class="slogan-tanb">
+                        <ruby>渀凌<rt>はんりょう</rt></ruby>
+                    </h2>
+                    <div class="slogan-text">
+                        激流のような勢いで前へ進み、あらゆる困難や限界を乗り越えてさらに高みを目指す「渀」は水が勢いよく流れる様子を表し、止まることなく前進し続ける力強さや、挑戦し続ける意志の象徴「凌」は、困難をしのぐことや、壁を越え、自分自身を超えて成長する。
+                    </div>
+                </div>
+                <div class="block-theme">
+                    <h2 class="slogan-dance">
+                        Titanic<br><small><small>~永遠に変わらない愛~</small></small>
+                    </h2>
+                    <div class="slogan-text">
+                        タイタニック号、それは、数奇な運命に翻弄された愛と悲劇の舞台。処女航海の船内では、愛や信頼関係である絆と、言動や心を縛る絆が交錯していた。タイタニック号は巨大な氷山との衝突を避けられず、沈没する。残された者たちは深い悲しみの中で葛藤しながらも、命を託してくれた人々の想いを胸に、生きることを決意する。
+                    </div>
+                </div>
+                <div class="block-theme">
+                    <h2 class="slogan-back">
+                        <ruby>狂濤龍破<rt>きょうとうりゅうは</rt></ruby>
+                    </h2>
+                    <div class="slogan-text">
+                        「狂濤」とは、狂い立つ大波のことで、押し寄せる困難を表す。我々は「共闘」し、龍の如く突き進み、これを打破する。どんな逆境にも屈することなく、仲間と力を合わせて前へ進む我々は、激しい波を乗り越え、他ブロを圧倒し、見る者の心を振動させ、無双する。我々が完全なる覇者として、君臨する姿をこのバックに懸ける。
+                    </div>
+                </div>
+                <div class="block-theme">
+                    <h2 class="slogan-oukon">
+                        <ruby>碧徠真覇<rt>へきらいしんは</rt></ruby>
+                    </h2>
+                    <div class="slogan-text">
+                        深く碧き大海から生まれし者が、仲間と勝利を引き寄せ、真の信念を胸に頂点へと突き進む。逆境さえ追い風に変え、碧き波のような勢いで会場をのみ込み、覇をつかみ取る。
+                    </div>
+                </div>
+            </div>
+            <div class="block-yellow">
+                <h2 class="block-title yellow">
+                    YELLOW
+                </h2>
+                <p class="block-class">
+                    3-2 3-10 3-11 2-5 2-9 1-6 1-7 1-8
+                </p>
+                <div class="blockreader-introduction block-theme">
+                    <p>
+                        修猷館大運動会という光輝くこの夏の中で流してきた汗や涙。それが本物であることは誰の目からも明らかだ。気合みせろ、イエロー。煌めけ、イエロー。この夏の一番星となるのは俺たちだ。
+                    </p>
+                    <p class="blockreader-name">ブロック長 3-2 向坂昇悟</p>
+                </div>
+                <img class="back-1st" src="">
+                <div class="block-theme">
+                    <h2 class="slogan-block">
+                        <ruby>明星<rt><span class="myojo">みょうじょう</span></rt></ruby>
+                    </h2>
+                    <div class="slogan-text">
+                        「明星」という文字は金星を表します。金星には星言葉があり、それは「愛」「美」そして「喜び」です。この夏、何かに皆が愛を注ぎ、美しさを感じ、喜びを得て欲しいという思いからこのスローガンにしました。
+                    </div>
+                </div>
+                <div class="block-theme">
+                    <h2 class="slogan-tanb">
+                        <ruby>軌昴<rt>きぼう</rt></ruby>
+                    </h2>
+                    <div class="slogan-text">
+                        昴とは、数々の星が集まりひときわ強く、美しく輝く星団である。一つになるという意味の「統ばる」に由来し、まさに集団で技を成すタンブリングそのものだ。我々の可能性は宇宙のように無限大であり、いかなる困難においても確かな希望を宿す。先人たちのタンブリングの軌跡を重んじ、自らの輝きと共に黄男児が今統ばる。
+                    </div>
+                </div>
+                <div class="block-theme">
+                    <h2 class="slogan-dance">
+                        KING OF POP<br><small><small>~Become a star that keeps shining~</small></small>
+                    </h2>
+                    <div class="slogan-text">
+                        KING OF POP―
+                        。今もなお世界中で語り継がれているマイケル・ジャクソンには、輝かしい栄光の裏に隠された、多くの苦悩に苛まれながらも、音楽を通して世界を癒そうとし続けた生き様があった。これからの時代を創っていく私たちこそが彼の想いを受け継ぎ、どんな困難にも立ち向かい、強く輝き続けていく。
+                    </div>
+                </div>
+                <div class="block-theme">
+                    <h2 class="slogan-back">
+                        <ruby>共輝臨星<rt>きょうきりんせい</rt></ruby>
+                    </h2>
+                    <div class="slogan-text">
+                        このテーマにはブロックスローガンの「明星」をイメージし、1人1人が団結し共に輝けるように、星のような大きく果てしない目標にも臨んでいくこの夏の象徴になるように想いを込めた。今年の黄バックにはブロックを幸運に導く守護神獣である麒麟を描く。Yellowの真の強さを感じる壮大なバックに注目して欲しい。
+                    </div>
+                </div>
+                <div class="block-theme">
+                    <h2 class="slogan-oukon">
+                        <ruby>黄金<rt>おうごん</rt></ruby>
+                    </h2>
+                    <div class="slogan-text">
+                        黄ブロック全体スローガン「明星」が表す金星の星言葉「愛」と「調和」を込め、全体テーマを「黄金」とした。黄金には物事が最も輝き、最高潮に達した状態という意味がある。一人一人が応コンを愛し、仲間と支え合いながら人生で最も輝く瞬間を創るとともに、努力や絆が色褪せることなく歴史に残る黄魂を魅せる。
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="match-page page">
+            <h1 class="section-midashi">競技紹介</h1>
+            <div class="match-container">
+                <div class="match-block match-block-top">
+                    <p class="program-time">8:55開始</p>
+                    <div class="match-title-container">
+                        <p class="match-title">タンブリング</p>
+                        <img class="match-image" src="">
+                    </div>
+                    <img class="match-image-picture" src="">
+                    <div class="match-text">
+                        <p>盛夏に包まれるここ修猷館で、漢達の「熱結」が体現される。各ブロックが4タワー、7ピラ等の大技に込めた想いを、いざ刮目せよ。</p>
+                    </div>
+                </div>
+                <div class="match-block">
+                    <p class="program-time">10:01開始</p>
+                    <div class="match-title-container">
+                        <p class="match-title">創作ダンス</p>
+                        <img class="match-image" src="">
+                    </div>
+                    <img class="match-image-picture" src="">
+                    <div class="match-text">
+                        <p>ダンスが苦手得意に関わらず、ブロックの女子全体が一体となって、テーマを体現する競技です。</p>
+                    </div>
+                </div>
+                <div class="match-block">
+                    <p class="program-time">12:35開始</p>
+                    <div class="match-title-container">
+                        <p class="match-title">応援コンテスト</p>
+                        <img class="match-image" src="">
+                    </div>
+                    <img class="match-image-picture" src="">
+                    <div class="match-text">
+                        <p>唯一、ブロック生全員が参加できる競技。四色のパネルを操作し、絵や言葉を歌と共に表現する。ブロック生全員の熱量に心動かされること間違いなし！特パネや迫力満点のバックにもご注目。</p>
+                    </div>
+                </div>
+                <div class="match-block">
+                    <p class="program-time">
+                        9:49予選開始<br>
+                        13:44決勝開始
+                    </p>
+                    <div class="match-title-container">
+                        <p class="match-title">綱引き</p>
+                        <img class="match-image" src="">
+                    </div>
+                    <img class="match-image-picture" src="">
+                    <div class="match-text">
+                        <p>各ブロック男女80人と最後尾のアンカーマンで綱を引く。「音頭取り」や「旗持ち」の声が、その力をもっと強くする！大迫力の団体戦に目が離せない！</p>
+                    </div>
+                </div>
+                <div class="match-block">
+                    <p class="program-time">
+                        10:57予選開始<br>
+                        13:22決勝開始
+                    </p>
+                    <div class="match-title-container">
+                        <p class="match-title">騎馬戦</p>
+                        <img class="match-image" src="">
+                    </div>
+                    <img class="match-image-picture" src="">
+                    <div class="match-text">
+                        <p>16騎vs16騎。80人vs80人。各ブロックの作戦、スキル、団結力、熱意が勝敗を決定づける白熱の競技である騎馬戦。いざ、ルビコン川を渡れ、修猷生。</p>
+                    </div>
+                </div>
+                <div class="match-block">
+                    <p class="program-time">
+                        8:43予選開始<br>
+                        14:59決勝開始
+                    </p>
+                    <div class="match-title-container">
+                        <p class="match-title">棒引き</p>
+                        <img class="match-image" src="">
+                    </div>
+                    <img class="match-image-picture" src="">
+                    <div class="match-text">
+                        <p>12本の棒を自陣に引き合う。1本1本の棒が勝敗を左右する！さらに、真ん中にあるスペシャル棒は得点が高い！全ての棒で繰り広げられる熱戦を見逃すな！</p>
+                    </div>
+                </div>
+                <div class="match-block">
+                    <p class="program-time">
+                        9:49予選開始<br>
+                        15:13決勝開始
+                    </p>
+                    <div class="match-title-container">
+                        <p class="match-title">棒倒し</p>
+                        <img class="match-image" src="">
+                    </div>
+                    <img class="match-image-picture" src="">
+                    <div class="match-text">
+                        <p>１、２年男子が攻撃と守備に分かれ、自分のブロックの棒を守りながらも、相手ブロックの陣地にある棒を先に倒して勝利を手に入れるこの熱い戦いが今、幕を開ける。</p>
+                    </div>
+                </div>
+                <div class="match-block">
+                    <p class="program-time">9:32開始</p>
+                    <div class="match-title-container">
+                        <p class="match-title">大帽走</p>
+                        <img class="match-image" src="">
+                    </div>
+                    <img class="match-image-picture" src="">
+                    <div class="match-text">
+                        <p>１、２年女子が、縄を跳び、大きな帽子をバトン代わりにして繋ぐ10人11脚リレー。最後は大帽走大幹２人とブロック長が走る。息のあった走りが勝利への1歩となる！</p>
+                    </div>
+                </div>
+                <div class="match-block">
+                    <p class="program-time">8:25開始</p>
+                    <div class="match-title-container">
+                        <p class="match-title">陸上α</p>
+                        <img class="match-image" src="">
+                    </div>
+                    <img class="match-image-picture" src="">
+                    <div class="match-text">
+                        <p>ただ速く駆け抜けるのではない。背負うのは、ともに汗を流した日々の記憶と、背中に受ける仲間の視線。火花散るフィールドの上、情熱を勝利へと結ぶための、果てなき旅路がここから始まる。</p>
+                    </div>
+                </div>
+                <div class="match-block">
+                    <p class="program-time">14:32開始</p>
+                    <div class="match-title-container">
+                        <p class="match-title">陸上β</p>
+                        <img class="match-image" src="">
+                    </div>
+                    <img class="match-image-picture" src="">
+                    <div class="match-text">
+                        <p>目の前に立ちはだかる壁、不意に足元をすくう罠。それはまるで、私たちが歩む人生そのもの。二兎も三兎とも追う修猷生、どう魅せてくれるのか。</p>
+                    </div>
+                </div>
+                <div class="match-block">
+                    <p class="program-time">15:25開始</p>
+                    <div class="match-title-container">
+                        <p class="match-title">陸上γ</p>
+                        <img class="match-image" src="">
+                    </div>
+                    <img class="match-image-picture" src="">
+                    <div class="match-text">
+                        <p>一瞬の疾走を、永遠の歓声へ。ブロックの想いが熱結したバトンは、ブロ長へと繋がる。勝利の行く末を定める、運命のラストラン。</p>
+                    </div>
+                </div>
+                <div class="match-block">
+                    <p class="program-time">11:14開始</p>
+                    <div class="match-title-container">
+                        <p class="match-title">エール</p>
+                        <img class="match-image" src="">
+                    </div>
+                    <img class="match-image-picture" src="">
+                    <div class="match-text">
+                        <p>演舞の「エーラー」とチアの「エールっこ」が、２か月かけて作り上げた完成度の高いエールで選手たちを応援。エーラーの迫真の演舞や鬼気迫る表情、エールっこの軽やかなダンスやはじける笑顔に心を動かされること間違いなし！
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map-page page">
+            <h1 class="section-midashi">マップ・会場図</h1>
+            <iframe class="googlemap"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.8249999960913!2d130.356341!3d33.5838927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354193a435436e39%3A0x27c45e52483debbe!2z56aP5bKh55yM56uL5L-u54y36aSo6auY562J5a2m5qCh!5e0!3m2!1sja!2sjp!4v1766908186345!5m2!1sja!2sjp"
+                width="80%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="kaijozu">
+                <img src="image/r08_undou_005_kaijozu.png">
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <script>
+            $(function () {
+                $(".nekketsu").click(function () {
+                    $(".nekketsu-page").toggleClass("page-display");
+                    $(".message-page").removeClass("page-display");
+                    $(".program-page").removeClass("page-display");
+                    $(".blockpage-page").removeClass("page-display");
+                    $(".match-page").removeClass("page-display");
+                    $(".map-page").removeClass("page-display");
+                    $(".nekketsu").toggleClass("button-underbar");
+                    $(".message").removeClass("button-underbar");
+                    $(".program").removeClass("button-underbar");
+                    $(".blockpage").removeClass("button-underbar");
+                    $(".match").removeClass("button-underbar");
+                    $(".map").removeClass("button-underbar");
+                });
+            });
+        </script>
+        <script>
+            $(function () {
+                $(".message").click(function () {
+                    $(".nekketsu-page").removeClass("page-display");
+                    $(".message-page").toggleClass("page-display");
+                    $(".program-page").removeClass("page-display");
+                    $(".blockpage-page").removeClass("page-display");
+                    $(".match-page").removeClass("page-display");
+                    $(".map-page").removeClass("page-display");
+                    $(".message").toggleClass("button-underbar");
+                    $(".nekketsu").removeClass("button-underbar");
+                    $(".program").removeClass("button-underbar");
+                    $(".blockpage").removeClass("button-underbar");
+                    $(".match").removeClass("button-underbar");
+                    $(".map").removeClass("button-underbar");
+                });
+            });
+        </script>
+        <script>
+            $(function () {
+                $(".program").click(function () {
+                    $(".nekketsu-page").removeClass("page-display");
+                    $(".program-page").toggleClass("page-display");
+                    $(".message-page").removeClass("page-display");
+                    $(".blockpage-page").removeClass("page-display");
+                    $(".match-page").removeClass("page-display");
+                    $(".map-page").removeClass("page-display");
+                    $(".program").toggleClass("button-underbar");
+                    $(".nekketsu").removeClass("button-underbar");
+                    $(".message").removeClass("button-underbar");
+                    $(".blockpage").removeClass("button-underbar");
+                    $(".match").removeClass("button-underbar");
+                    $(".map").removeClass("button-underbar");
+                });
+            });
+        </script>
+        <script>
+            $(function () {
+                $(".blockpage").click(function () {
+                    $(".nekketsu-page").removeClass("page-display");
+                    $(".blockpage-page").toggleClass("page-display");
+                    $(".message-page").removeClass("page-display");
+                    $(".program-page").removeClass("page-display");
+                    $(".match-page").removeClass("page-display");
+                    $(".map-page").removeClass("page-display");
+                    $(".blockpage").toggleClass("button-underbar");
+                    $(".nekketsu").removeClass("button-underbar");
+                    $(".message").removeClass("button-underbar");
+                    $(".program").removeClass("button-underbar");
+                    $(".match").removeClass("button-underbar");
+                    $(".map").removeClass("button-underbar");
+                });
+            });
+        </script>
+        <script>
+            $(function () {
+                $(".match").click(function () {
+                    $(".nekketsu-page").removeClass("page-display");
+                    $(".match-page").toggleClass("page-display");
+                    $(".message-page").removeClass("page-display");
+                    $(".program-page").removeClass("page-display");
+                    $(".blockpage-page").removeClass("page-display");
+                    $(".map-page").removeClass("page-display");
+                    $(".match").toggleClass("button-underbar");
+                    $(".nekketsu").removeClass("button-underbar");
+                    $(".message").removeClass("button-underbar");
+                    $(".program").removeClass("button-underbar");
+                    $(".blockpage").removeClass("button-underbar");
+                    $(".map").removeClass("button-underbar");
+                });
+            });
+        </script>
+        <script>
+            $(function () {
+                $(".map").click(function () {
+                    $(".nekketsu-page").removeClass("page-display");
+                    $(".map-page").toggleClass("page-display");
+                    $(".message-page").removeClass("page-display");
+                    $(".program-page").removeClass("page-display");
+                    $(".blockpage-page").removeClass("page-display");
+                    $(".match-page").removeClass("page-display");
+                    $(".map").toggleClass("button-underbar");
+                    $(".nekketsu").removeClass("button-underbar");
+                    $(".message").removeClass("button-underbar");
+                    $(".program").removeClass("button-underbar");
+                    $(".blockpage").removeClass("button-underbar");
+                    $(".match").removeClass("button-underbar");
+                });
+            });
+        </script>
+    </main>
+    <footer>
+        <p>&copy;第79回修猷大運動会運営委員会広報部署</p>
+        <p>
+            福岡県立修猷館高等学校<br>
+            〒814-0002<br>
+            福岡県福岡市早良区西新６丁目１−１０
+        </p>
+    </footer>
+    <style>
+        /* デスクトップ用のサイズ指定　
+        @media screen and (min-width: 769px) */
+
+        /* スマホ用のサイズ指定
+         @media screen and (max-width: 768px)　*/
+
+        .page_top_btn {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-weight: bold;
+            padding: 0.7em;
+            text-align: center;
+            background: rgb(255, 0, 255);
+            color: #fff;
+            transition: 0.3s0;
+        }
+
+        #page_top {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            background: #a007e2;
+            border-radius: 50%;
+            opacity: 0.6;
+        }
+
+        /* Font Awesome */
+        #page_top::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: '↑';
+            font-size: 25px;
+            color: rgb(255, 255, 255);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* マウスオーバー時 */
+        .page_top_btn:hover {
+            background: rgb(255, 0, 0, 0.8);
+            color: rgb(255, 255, 255, 0.8);
+        }
+
+        .section-midashi {
+            font-size: 26px;
+            font-weight: 600;
+            color: #2d3436;
+            padding: 14px 20px;
+            background-color: #f8f9fa;
+            border-left: 6px solid #00b894;
+            border-radius: 0 4px 4px 0;
+            margin: 10px 0;
+        }
+
+        .header-style {
+            height: 80px;
+            background-color: blueviolet;
+            display: flex;
+        }
+
+        .rokkousei img {
+            height: 70px !important;
+            width: auto !important;
+        }
+
+        .header-title {
+            font-size: 20px;
+        }
+
+        .main-header {
+            height: calc(100vh - 80px);
+            background-image: url(image/r08_undou_002_haikei1.jpg);
+            background-repeat: no-repeat;
+            /* 背景画像を繰り返し表示させない */
+            background-size: cover;
+            /* 背景画像を全画面表示 */
+            background-position: center;
+            /* 背景画像の表示位置を中央に */
+            z-index: 1;
+        }
+
+        .day {
+            margin: 0 auto;
+            text-align: center;
+            width: fit-content;
+            padding: 5px;
+            background-color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            border-radius: 5px;
+            border: 1.5px solid #000000;
+        }
+
+        .time-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .time-element {
+            display: flex;
+            flex-flow: column;
+            text-align: center;
+        }
+
+        .colon {
+            font-size: 1em;
+            line-height: 1;
+            margin: 0 0.5rem;
+        }
+
+        .time {
+            width: 50px;
+            height: 50px;
+            margin: .2rem;
+            background-color: #ed91d8;
+            border-radius: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            border: 1px solid rgba(33, 37, 41, 0.25);
+            box-shadow:
+                0 1px 2px rgba(33, 37, 41, 0.25),
+                4px 6px 14px rgba(33, 37, 41, 0.35);
+        }
+
+        .time p {
+            margin: 0;
+            font-size: 2em;
+            text-align: center;
+        }
+
+
+        .timelog p {
+            margin: 0;
+        }
+
+        #day,
+        #hour,
+        #min,
+        #sec {
+            font-size: 2.3rem;
+
+        }
+
+        .date {
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;
+            background-color: rgba(168, 130, 221, 0.50);
+            border-radius: 10px;
+            padding: 10px 10px 10px 10px;
+            border: 1px solid rgba(33, 37, 41, 0.25);
+            box-shadow:
+                0 1px 2px rgba(33, 37, 41, 0.25),
+                4px 6px 14px rgba(33, 37, 41, 0.35);
+            color: #1F1F1F;
+        }
+
+        .main-header-text {
+            text-align: center;
+        }
+
+        .nekketsu-page {
+            display: flex;
+        }
+
+        .nekketsu-image {
+            width: 30%;
+            margin-right: auto;
+        }
+
+        .nekketsu-text {}
+
+        .button-text {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .button-container {
+            display: flex;
+        }
+
+        .button1 {
+            border-radius: 10px;
+            padding: 10px 30px;
+            text-decoration: none;
+            font-size: 1em;
+            box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.8);
+            margin: 7px auto;
+            width: calc(100%/6);
+            writing-mode: vertical-lr;
+            height: 160px;
+        }
+
+        .button1:hover {
+            color: #fff;
+            opacity: 0.6;
+        }
+
+        .button2 {
+            border-radius: 10px;
+            padding: 10px 30px;
+            text-decoration: none;
+            font-size: 1em;
+            box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.8);
+            margin: 7px auto;
+            width: calc(100%/6);
+            writing-mode: vertical-lr;
+            height: 160px;
+        }
+
+        .button1:hover,
+        .button2:hover {
+            color: #666666;
+            opacity: 0.6;
+            transition: 0.5s all;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page-display {
+            display: block;
+        }
+
+        .button-underbar {
+            border-bottom: #66ffff 8px solid;
+        }
+
+        .kantogen {
+            padding: 80px 20px;
+        }
+
+        .kantogen-box {
+            display: flex;
+            gap: 20px;
+            padding: 10px;
+            background-color: rgba(179, 242, 221, 0.5);
+            border-radius: 7px;
+            border: 1px solid rgba(33, 37, 41, 0.25);
+            box-shadow:
+                0 1px 2px rgba(33, 37, 41, 0.25),
+                4px 6px 14px rgba(33, 37, 41, 0.35);
+            margin: 12px 10px;
+        }
+
+        .kantogen-photo {
+            height: auto;
+            min-width: 300px;
+        }
+
+        .kantogen-text {
+            line-height: 1.6;
+        }
+
+        .kantogen-text-soumu {
+            line-height: 1.6;
+            width: 100%;
+        }
+
+        .name {
+            display: block;
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .yakushoku {
+            border-bottom: solid 1px #000;
+        }
+
+        .kantogen-photo img {
+            padding-bottom: 10px;
+        }
+
+        .yakushoku {
+            display: block;
+            text-align: center;
+            font-size: 18px;
+            margin-top: -10px;
+        }
+
+        .kantogen-text {
+            font-size: 1.1rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            .kantogen-box {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .kantogen-photo {
+                width: 80%;
+                max-width: 320px;
+            }
+
+            .kantogen-photo-soumu {
+                width: 80%;
+                max-width: 320px;
+            }
+
+            .kantogen-text {
+                width: 100%;
+            }
+        }
+
+        .kantogen-photo-soumu {
+            height: 400px;
+            width: 300px;
+        }
+
+        .soumu {
+            writing-mode: vertical-rl;
+            width: fit-content;
+        }
+
+        @media screen and (min-width: 769px) {
+            .soumu {
+                width: 100%;
+                font-size: 1rem;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            .soumu {
+                font-size: 1rem;
+                -ms-writing-mode: tb-rl;
+                -webkit-column-count: 2;
+                -webkit-column-fill: auto;
+                -webkit-column-gap: 16px;
+                -webkit-writing-mode: vertical-rl;
+                column-count: 2;
+                column-fill: auto;
+                column-gap: 16px;
+                height: 660px;
+                width: 100%;
+                writing-mode: vertical-rl;
+            }
+        }
+
+        .program-caution {
+            margin: 0 auto;
+            width: 80%;
+            padding: 10px 0;
+        }
+
+        .program-container {
+            display: flex;
+        }
+
+        .program-line-1 {
+            width: 40%;
+            margin-left: auto;
+        }
+
+        .program-line-2 {
+            width: 40%;
+            margin-right: auto;
+
+        }
+
+        .program-box {
+            display: flex;
+            padding: 5px;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            border-top: solid 1px #000000;
+        }
+
+        .program-text {
+            text-align: center;
+            width: 50%
+        }
+
+        .program-chousei {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            width: 50%;
+            font-size: 1.2rem;
+        }
+
+        .oukonchousei {
+            font-size: 1.1rem !important;
+        }
+
+
+
+        @media screen and (max-width: 768px) {
+            .program-container {
+                display: block;
+            }
+
+            .program-line-1 {
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+            }
+
+            .program-line-2 {
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+            }
+        }
+
+        @media screen and (min-width: 769px) {
+
+            .program-line-1 {
+                border-right: 1px solid #000000;
+            }
+        }
+
+        .blockpage-page {
+            color: #fff;
+        }
+
+        .block-theme {
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .slogan-text {
+            border: 7px solid #d0ecff;
+            padding: 7px;
+        }
+
+        .block-red {
+            background-color: #c0392b;
+            /* 落ち着いたレンガレッド */
+            padding: 10px 0;
+
+        }
+
+        .red {
+            font-weight: bold;
+            font-size: 70px;
+            color: #fff;
+            text-shadow:
+                0 0 1px #fff,
+                0 0 20px #cc0022,
+                0 0 10px #cc0022,
+                0 0 10px #ff0055,
+                0 0 60px #ff0040,
+                0 10px 3px #000;
+            text-align: center;
+            padding-bottom: 15px;
+        }
+
+        .block-blue {
+            background-color: #1a3a8f;
+            /* 深めのロイヤルブルー */
+            padding: 10px 0;
+
+        }
+
+        .blue {
+            font-weight: bold;
+            font-size: 70px;
+            color: #fff;
+            text-shadow:
+                0 0 1px #fff,
+                0 0 20px #0022cc,
+                0 0 10px #0022cc,
+                0 0 10px #0055ff,
+                0 0 60px #0040ff,
+                0 10px 3px #000;
+            text-align: center;
+            padding-bottom: 15px;
+        }
+
+        .block-yellow {
+            background-color: #b8860b;
+            /* ダークゴールデンロッド(マスタード寄り) */
+            padding: 10px 0;
+
+        }
+
+        .yellow {
+            font-weight: bold;
+            font-size: 70px;
+            color: #fff;
+            text-shadow:
+                0 0 1px #fff,
+                0 0 20px #ccaa00,
+                0 0 10px #ccaa00,
+                0 0 10px #ffd500,
+                0 0 60px #ffbf00,
+                0 10px 3px #000;
+            text-align: center;
+            padding-bottom: 15px;
+        }
+
+
+
+        .block-white {
+            background-color: #4a4a4a;
+            /* ミディアムダークグレー */
+            padding: 10px 0;
+        }
+
+        .white {
+            font-weight: bold;
+            font-size: 70px;
+            color: #fff;
+            text-shadow:
+                0 0 1px #fff,
+                0 0 20px #cccccc,
+                0 0 10px #cccccc,
+                0 0 10px #ffffff,
+                0 0 60px #f0f0ff,
+                0 10px 3px #000;
+            text-align: center;
+            padding-bottom: 15px;
+        }
+
+        .block-red {
+            position: relative;
+        }
+
+        .block-class {
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            font-weight: bold;
+            border-bottom: 4px solid #d0ecff;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .blockreader-name {
+            text-align: right;
+            padding-top: 10px;
+        }
+
+        .blockreader-introduction {
+            border: 7px solid #d0ecff;
+            padding: 7px;
+        }
+
+        .slogan-block {
+            position: relative;
+            color: black;
+            background: #d0ecff;
+            line-height: 1.4;
+            padding: 0.25em 0.5em;
+            margin-bottom: -10px;
+            border-radius: 0 5px 5px 5px;
+            text-align: center;
+            z-index: 10;
+            margin-top: 40px;
+        }
+
+        .slogan-block:after {
+            position: absolute;
+            font-family: "Font Awesome 5 Free", 'Quicksand', 'Avenir', 'Arial', sans-serif;
+            font-weight: 900;
+            content: 'ブロックスローガン';
+            background: #2196F3;
+            color: #fff;
+            left: 0px;
+            bottom: 100%;
+            border-radius: 5px 5px 0 0;
+            padding: 3px 7px 1px;
+            font-size: 0.7em;
+            line-height: 1;
+            letter-spacing: 0.05em
+        }
+
+        .slogan-tanb {
+            position: relative;
+            color: black;
+            background: #d0ecff;
+            line-height: 1.4;
+            padding: 0.25em 0.5em;
+            border-radius: 0 5px 5px 5px;
+            text-align: center;
+            z-index: 10;
+            margin-bottom: -10px;
+            margin-top: 40px;
+        }
+
+        .slogan-tanb:after {
+            position: absolute;
+            font-family: "Font Awesome 5 Free", 'Quicksand', 'Avenir', 'Arial', sans-serif;
+            font-weight: 900;
+            content: 'タンブリングテーマ';
+            background: #2196F3;
+            color: #fff;
+            left: 0px;
+            bottom: 100%;
+            border-radius: 5px 5px 0 0;
+            padding: 3px 7px 1px;
+            font-size: 0.7em;
+            line-height: 1;
+            letter-spacing: 0.05em
+        }
+
+        .slogan-dance {
+            position: relative;
+            color: black;
+            background: #d0ecff;
+            line-height: 1.4;
+            padding: 0.25em 0.5em;
+            border-radius: 0 5px 5px 5px;
+            text-align: center;
+            z-index: 10;
+            margin-bottom: -10px;
+            margin-top: 40px;
+        }
+
+        .slogan-dance:after {
+            position: absolute;
+            font-family: "Font Awesome 5 Free", 'Quicksand', 'Avenir', 'Arial', sans-serif;
+            font-weight: 900;
+            content: 'ダンステーマ';
+            background: #2196F3;
+            color: #fff;
+            left: 0px;
+            bottom: 100%;
+            border-radius: 5px 5px 0 0;
+            padding: 3px 7px 1px;
+            font-size: 0.7em;
+            line-height: 1;
+            letter-spacing: 0.05em
+        }
+
+        .slogan-back {
+            position: relative;
+            color: black;
+            background: #d0ecff;
+            line-height: 1.4;
+            padding: 0.25em 0.5em;
+            border-radius: 0 5px 5px 5px;
+            text-align: center;
+            z-index: 10;
+            margin-bottom: -10px;
+            margin-top: 40px;
+        }
+
+        .slogan-back:after {
+            position: absolute;
+            font-family: "Font Awesome 5 Free", 'Quicksand', 'Avenir', 'Arial', sans-serif;
+            font-weight: 900;
+            content: 'バックテーマ';
+            background: #2196F3;
+            color: #fff;
+            left: 0px;
+            bottom: 100%;
+            border-radius: 5px 5px 0 0;
+            padding: 3px 7px 1px;
+            font-size: 0.7em;
+            line-height: 1;
+            letter-spacing: 0.05em
+        }
+
+        .slogan-oukon {
+            position: relative;
+            color: black;
+            background: #d0ecff;
+            line-height: 1.4;
+            padding: 0.25em 0.5em;
+            border-radius: 0 5px 5px 5px;
+            text-align: center;
+            z-index: 10;
+            margin-bottom: -10px;
+            margin-top: 40px;
+        }
+
+        .slogan-oukon:after {
+            position: absolute;
+            font-family: "Font Awesome 5 Free", 'Quicksand', 'Avenir', 'Arial', sans-serif;
+            font-weight: 900;
+            content: '応援コンテストテーマ';
+            background: #2196F3;
+            color: #fff;
+            left: 0px;
+            bottom: 100%;
+            border-radius: 5px 5px 0 0;
+            padding: 3px 7px 1px;
+            font-size: 0.7em;
+            line-height: 1;
+            letter-spacing: 0.05em
+        }
+
+        .myojo {
+            font-size: 8px;
+        }
+
+        .match-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 100%;
+        }
+
+        .match-block {
+            background-color: rgba(0, 204, 255, 0.5);
+            border: solid 3px #fff;
+            border: solid 3px #000;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 20px -10px 25px 0 #d9d9d9;
+            min-height: 500px;
+        }
+
+        .program-time {
+            text-align: center;
+        }
+
+        .match-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 auto;
+        }
+
+        .match-title-container {
+            display: flex;
+        }
+
+        @media screen and (min-width: 769px) {
+            .match-block {
+                width: calc(90%/4);
+                margin: 10px;
+            }
+
+            .match-container {
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .match-block {
+                max-width: 90%;
+                margin: 0 auto;
+                margin-bottom: 10px;
+            }
+
+            .match-container {
+                display: block;
+            }
+
+            .match-block-top {
+                margin-top: 10px;
+            }
+        }
+
+        .kaijozu {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .googlemap {
+            display: block;
+            margin: 0 auto !important;
+        }
+
+        footer {
+            padding-top: 15px;
+            background-color: #fff;
+            color: #000;
+        }
+
+        /* ここからリセットcss  */
+
+        *,
+        ::before,
+        ::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        ul,
+        ol {
+            list-style: none !important;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        body {
+            font-family: sans-serif;
+            font-size: 16px;
+            color: #000000;
+            line-height: 1;
+            background-color: #ffffff;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+
+        .l-header--container {
+            display: none;
+        }
+
+        .l-body__top {
+            display: none;
+        }
+
+        .l-body-sub {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .l-footer--container {
+            display: none;
+        }
+
+        .l-body-main__data {
+            display: none;
+        }
+
+        .l-header {
+            display: none;
+        }
+
+        .u-btn__page {
+            display: none;
+        }
+
+        .l-body contents {
+            margin: 0;
+            max-width: 100% !important;
+        }
+
+        #l-body {
+            max-width: 100% !important;
+        }
+
+        #main {
+            margin: 0;
+        }
+
+        main {
+            margin: 0;
+        }
+
+        .l-body {
+            margin: 0;
+            width: 100%;
+        }
+
+        html {
+            margin-top: 0 !important;
+        }
+
+        .l-body-main {
+            width: 100% !important;
+        }
+
+        .l-body__container {
+            display: block;
+        }
+
+        #content {
+            width: 100vw;
+            overflow: hidden;
+            font-family: "Noto Serif JP", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 16px;
+            color: #000000;
+        }
+
+        @media (min-width: 992px) {
+            main {
+                margin: 0;
+            }
+        }
+
+        .l-body-main__body a {
+            text-decoration: none;
+        }
+
+        .wp-block-columns {
+            margin-bottom: 0;
+        }
+
+        .contents .l-body-main__container>div {
+            margin-bottom: 0;
+        }
+    </style>
+</body>
+
+</html>
