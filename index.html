@@ -3,17 +3,20 @@
 
 <head>
     <meta charset="UTF=8">
-    <title>第79回修猷大運動会特設HP</title>
+    <title>第79回修猷大運動会公式HP</title>
     <meta name="description" content="第79回修猷大運動会の特設ホームページです。">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Sawarabi+Gothic&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header class="header-style">
         <a class="rokkousei" href="https://shuyu.fku.ed.jp/">
-            <img src="image/r08_undou_001_rokkousei.png">
+            <img src="./images/r08_undou_001_rokkousei.png">
         </a>
-        <p class="header-title">第79回修猷大運動会特設HP</p>
+        <p class="header-title">第79回修猷大運動会公式HP</p>
     </header>
     <main>
         <a href="#" id="page_top"></a>
@@ -22,67 +25,48 @@
                 <img src="">
             </div>
             <div class="day">
-                <p>令和8年9月5日(土)
+                <p><span>2026</span>年<span>9</span>月<span>5</span>日<small>(土)</small>
                     <br>
-                    <small><small>予備日 9/6(日)</small></small>
+                    <small><small>予備日 <span>9</span>月<span>6</span>日<small>(日)</small></small></small>
                 </p>
             </div>
-            <div class="time-container">
-                <p class="date-midashi">開催<br>まで</p>
-                <div class="time-element">
-                    <div class="time"><span id="day"></span></div>
-                    <div class="timelog">
-                        <p>日</p>
-                    </div>
+
+            <div class="countdown-container">
+                <p class="countdown-container-text">大運動会まで</p>
+                <div class="time-container">
+                    <p class="time-container-text">あと</p>
+                    <p class="time"><span id="day"></span>日</p>
+                    <p class="time"><span id="hour"></span>時間</p>
                 </div>
-                <p class="colon">：</p>
-                <div class="time-element">
-                    <div class="time"><span id="hour"></span></div>
-                    <div class="timelog">
-                        <p>時間</p>
-                    </div>
-                </div>
-                <script>
-                    document.addEventListener("DOMContentLoaded", () => {
-
-                        const countdownWrapper = document.querySelector(".countdown");
-
-                        const day = document.getElementById("day");
-                        const hour = document.getElementById("hour");
-                        const min = document.getElementById("min");
-                        const sec = document.getElementById("sec");
-
-                        const target = new Date(2026, 8, 5, 8, 0, 0);
-                        let timerId;
-
-                        function update() {
-                            const now = new Date();
-                            const diff = target - now;
-
-                            if (diff <= 0) {
-                                clearTimeout(timerId);
-                                if (countdownWrapper) countdownWrapper.style.display = "none";
-                                return;
-                            }
-
-                            const d = Math.floor(diff / 86400000);
-                            const h = Math.floor(diff / 3600000) % 24;
-                            const m = Math.floor(diff / 60000) % 60;
-                            const s = Math.floor(diff / 1000) % 60;
-
-                            day.textContent = String(d).padStart(2, "0");
-                            hour.textContent = String(h).padStart(2, "0");
-                            min.textContent = String(m).padStart(2, "0");
-                            sec.textContent = String(s).padStart(2, "0");
-
-                            const delay = 1000 - (Date.now() % 1000);
-                            timerId = setTimeout(update, delay);
-                        }
-
-                        update();
-                    });
-                </script>
             </div>
+            <script>
+                const container = document.querySelector(".countdown-container");
+                const day = document.getElementById("day");
+                const hour = document.getElementById("hour");
+
+                function countdown() {
+                    const now = new Date(); // 現在時刻を取得
+                    const target = new Date(2026, 8, 5, 0, 0, 0); // 2026年9月5日 0:00
+                    const diff = target.getTime() - now.getTime(); // 時間の差を取得（ミリ秒）
+
+                    if (diff <= 0) {
+                        // 目標日を過ぎたら非表示にする
+                        container.style.display = "none";
+                        return;
+                    }
+
+                    // ミリ秒から単位を計算
+                    const calcDay = Math.floor(diff / 1000 / 60 / 60 / 24);
+                    const calcHour = Math.floor(diff / 1000 / 60 / 60) % 24;
+
+                    // 表示（時間のみ2桁表示）
+                    day.innerHTML = calcDay;
+                    hour.innerHTML = calcHour < 10 ? '0' + calcHour : calcHour;
+                }
+
+                countdown();
+                setInterval(countdown, 1000 * 60); // 1分ごとに更新
+            </script>
         </div>
         <div class="button">
             <div class="button-text">表示したい項目をタップまたはクリックで表示</div>
@@ -97,19 +81,21 @@
         </div>
         <div class="nekketsu-page page">
             <h1 class="section-midashi">スローガン紹介</h1>
-            <div class="nekketsu-image">
-                <img src="">
-            </div>
-            <div class="nekketsu-text">
-                <p>
-                    熱結とは、大運動会にかける修猷生の熱い思いを一つにすること。修猷生一人一人が胸に宿す大運動会への熱い思いを語り合い、ぶつけ合い、高め合い、大運動会へ団結する。そうして全員が一丸となった先に見える景色は修猷生の心に刻み込まれる。修猷生が「熱結」すれば、これまでの大運動会を凌駕するような大運動会を創り上げることができる。
-                </p>
+            <div class="nekketsu-container">
+                <div class="nekketsu-image">
+                    <img src="./images/r07_bunka_003_miryo-tate.png">
+                </div>
+                <div class="nekketsu-text">
+                    <p>
+                        熱結とは、大運動会にかける修猷生の熱い思いを一つにすること。修猷生一人一人が胸に宿す大運動会への熱い思いを語り合い、ぶつけ合い、高め合い、大運動会へ団結する。そうして全員が一丸となった先に見える景色は修猷生の心に刻み込まれる。修猷生が「熱結」すれば、これまでの大運動会を凌駕するような大運動会を創り上げることができる。
+                    </p>
+                </div>
             </div>
         </div>
         <div class="message-page page">
             <h1 class="section-midashi">大運動会によせて</h1>
             <div class="kantogen-box">
-                <img class="kantogen-photo" src="/image/r08_undou_004_kancho.jpg" alt="館長の写真">
+                <img class="kantogen-photo" src="./images/r08_undou_004_kancho.jpg" alt="館長の写真">
                 <div class="kantogen-text">
                     <span class="name">野本準二</span>
                     <span class="yakushoku">館長</span>
@@ -123,7 +109,7 @@
             </div>
 
             <div class="kantogen-box">
-                <img class="kantogen-photo-soumu" src="/image/r08_undou_004_kancho.jpg" alt="運営委員長の写真">
+                <img class="kantogen-photo-soumu" src="./images/r08_undou_004_kancho.jpg" alt="運営委員長の写真">
                 <div class="kantogen-text-soumu">
                     <span class="name">浦野子虎</span>
                     <span class="yakushoku">総務</span>
@@ -155,7 +141,7 @@
                 </div>
             </div>
             <div class="kantogen-box">
-                <img class="kantogen-photo" src="/image/r08_undou_004_kancho.jpg" alt="運営委員長の写真">
+                <img class="kantogen-photo" src="./images/r08_undou_004_kancho.jpg" alt="運営委員長の写真">
                 <div class="kantogen-text">
                     <span class="name">筒井和翔</span>
                     <span class="yakushoku">運営委員長</span>
@@ -177,93 +163,97 @@
             </p>
             <div class="program-container">
                 <div class="program-line-1">
-                    <div class="program-box">
+                    <div class="program-box1">
                         <p class="program-chousei">プログラム</p>
                         <p class="program-chousei">開始時間</p>
                     </div>
-                    <div class="program-box">
+                    <div class="program-box2">
                         <p class="program-chousei">開会式</p>
                         <p class="program-chousei">8:00</p>
                     </div>
-                    <div class="program-box">
+                    <div class="program-box1">
                         <p class="program-chousei">陸上α</p>
                         <p class="program-chousei">8:25</p>
                     </div>
-                    <div class="program-box">
+                    <div class="program-box2">
                         <p class="program-chousei">棒引き 予選</p>
                         <p class="program-chousei">8:43</p>
                     </div>
-                    <div class="program-box">
+                    <div class="program-box1">
                         <p class="program-chousei">タンブリング</p>
                         <p class="program-chousei">8:55</p>
                     </div>
-                    <div class="program-box">
+                    <div class="program-box2">
                         <p class="program-chousei">大帽走</p>
                         <p class="program-chousei">9:32</p>
                     </div>
-                    <div class="program-box">
+                    <div class="program-box1">
                         <p class="program-chousei">棒倒し 予選</p>
                         <p class="program-chousei">9:49</p>
                     </div>
-                    <div class="program-box">
+                    <div class="program-box2">
                         <p class="program-chousei">創作ダンス</p>
                         <p class="program-chousei">10:01</p>
                     </div>
-                    <div class="program-box">
+                    <div class="program-box1">
                         <p class="program-chousei">綱引き 予選</p>
                         <p class="program-chousei">10:28</p>
                     </div>
-                    <div class="program-box">
+                    <div class="program-box2">
                         <p class="program-chousei">騎馬戦 予選</p>
                         <p class="program-chousei">10:57</p>
                     </div>
-                    <div class="program-box">
+                    <div class="program-box1">
                         <p class="program-chousei">エール</p>
                         <p class="program-chousei">11:14</p>
                     </div>
                 </div>
                 <div class="program-line-2">
-                    <div class="program-box">
+                    <div class="pconly">
+                        <p class="program-chousei">プログラム</p>
+                        <p class="program-chousei">開始時間</p>
+                    </div>
+                    <div class="program-box2">
                         <p class="program-chousei">１昼</p>
                         <p class="program-chousei">11:45</p>
                     </div>
-                    <div class="program-box">
+                    <div class="program-box1">
                         <p class="program-chousei">中間発表</p>
                         <p class="program-chousei">12:34</p>
                     </div>
-                    <div class="program-box">
+                    <div class="program-box2">
                         <p class="program-chousei oukonchousei">応援コンテスト</p>
                         <p class="program-chousei">12:35</p>
                     </div>
-                    <div class="program-box">
+                    <div class="program-box1">
                         <p class="program-chousei">騎馬戦 決勝</p>
                         <p class="program-chousei">13:22</p>
                     </div>
-                    <div class="program-box">
+                    <div class="program-box2">
                         <p class="program-chousei">綱引き 決勝</p>
                         <p class="program-chousei">13:44</p>
                     </div>
-                    <div class="program-box">
+                    <div class="program-box1">
                         <p class="program-chousei">２昼</p>
                         <p class="program-chousei">13:59</p>
                     </div>
-                    <div class="program-box">
+                    <div class="program-box2">
                         <p class="program-chousei">陸上β</p>
                         <p class="program-chousei">14:32</p>
                     </div>
-                    <div class="program-box">
+                    <div class="program-box1">
                         <p class="program-chousei">棒引き 決勝</p>
                         <p class="program-chousei">14:59</p>
                     </div>
-                    <div class="program-box">
+                    <div class="program-box2">
                         <p class="program-chousei">棒倒し 決勝</p>
                         <p class="program-chousei">15:13</p>
                     </div>
-                    <div class="program-box">
+                    <div class="program-box1">
                         <p class="program-chousei">陸上γ</p>
                         <p class="program-chousei">15:25</p>
                     </div>
-                    <div class="program-box">
+                    <div class="program-box2">
                         <p class="program-chousei">閉会式</p>
                         <p class="program-chousei">15:40</p>
                     </div>
@@ -655,7 +645,7 @@
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
             <div class="kaijozu">
-                <img src="image/r08_undou_005_kaijozu.png">
+                <img src="./images/r08_undou_005_kaijozu.png">
             </div>
         </div>
         <script src="https://code.jquery.com/jquery.min.js"></script>
@@ -769,12 +759,21 @@
         </script>
     </main>
     <footer>
+        <div class="footer-title">
+            <div class="rokkousei">
+                <img src="./images/r08_undou_001_rokkousei.png">
+            </div>
+            <p class="footer-title-text">
+                福岡県立修猷館高等学校<br>
+                第79回修猷大運動会公式HP
+            </p>
+        </div>
         <p>&copy;第79回修猷大運動会運営委員会広報部署</p>
         <p>
             福岡県立修猷館高等学校<br>
-            〒814-0002<br>
-            福岡県福岡市早良区西新６丁目１−１０
+            〒814-8510 福岡県福岡市早良区西新６丁目１−１０
         </p>
+        <a class="shuyu-link" href="https://shuyu.fku.ed.jp">修猷館高等学校のページはこちら</a>
     </footer>
     <style>
         /* デスクトップ用のサイズ指定　
@@ -842,7 +841,7 @@
 
         .header-style {
             height: 80px;
-            background-color: blueviolet;
+            background-color: rgba(153, 0, 204, 0.9);
             display: flex;
         }
 
@@ -853,11 +852,14 @@
 
         .header-title {
             font-size: 20px;
+            margin: auto 0;
+            margin-bottom: 30px;
+            color: #ffffff;
         }
 
         .main-header {
             height: calc(100vh - 80px);
-            background-image: url(image/r08_undou_002_haikei1.jpg);
+            background-image: url(./images/r08_undou_002_haikei1.jpg);
             background-repeat: no-repeat;
             /* 背景画像を繰り返し表示させない */
             background-size: cover;
@@ -872,103 +874,116 @@
             text-align: center;
             width: fit-content;
             padding: 5px;
-            background-color: white;
+            background-color: rgba(255, 255, 255,0.5);
             font-size: 2rem;
             font-weight: bold;
             border-radius: 5px;
             border: 1.5px solid #000000;
         }
 
+        .day span {
+            font-family: "Sawarabi Gothic", sans-serif;
+            font-weight: bold;
+            font-style: normal;
+        }
+
+
+        .countdown-container {
+            margin: 0 auto;
+            margin-top: 3rem;
+            background-color: rgba(204, 204, 204, 0.5);
+            border-radius: 5px;
+            border: solid 2px #333333;
+            padding: 8px;
+            width: 280px;
+        }
+
+        .countdown-container-text {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
         .time-container {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            padding-top: 30px;
-            padding-bottom: 30px;
         }
 
-        .time-element {
-            display: flex;
-            flex-flow: column;
+        .time-container-text {
+            align-self: center;
+            font-size: 1.6rem;
+            width: auto;
             text-align: center;
-        }
-
-        .colon {
-            font-size: 1em;
-            line-height: 1;
-            margin: 0 0.5rem;
         }
 
         .time {
-            width: 50px;
-            height: 50px;
             margin: .2rem;
-            background-color: #ed91d8;
+            background-color: #333333;
             border-radius: 1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            border: 1px solid rgba(33, 37, 41, 0.25);
-            box-shadow:
-                0 1px 2px rgba(33, 37, 41, 0.25),
-                4px 6px 14px rgba(33, 37, 41, 0.35);
-        }
-
-        .time p {
-            margin: 0;
-            font-size: 2em;
+            width: 100px;
+            flex-shrink: 0;
             text-align: center;
-        }
-
-
-        .timelog p {
-            margin: 0;
+            height: 70px;
+            color: #cccccc;
         }
 
         #day,
-        #hour,
-        #min,
-        #sec {
-            font-size: 2.3rem;
-
-        }
-
-        .date {
-            display: block;
-            width: fit-content;
-            margin: 0 auto;
-            font-weight: bold;
-            font-size: 30px;
-            text-align: center;
-            background-color: rgba(168, 130, 221, 0.50);
-            border-radius: 10px;
-            padding: 10px 10px 10px 10px;
-            border: 1px solid rgba(33, 37, 41, 0.25);
-            box-shadow:
-                0 1px 2px rgba(33, 37, 41, 0.25),
-                4px 6px 14px rgba(33, 37, 41, 0.35);
-            color: #1F1F1F;
+        #hour {
+            font-size: 40px;
+            font-family: "Sawarabi Gothic", sans-serif;
+            font-weight: 400;
+            font-style: normal;
         }
 
         .main-header-text {
             text-align: center;
         }
 
-        .nekketsu-page {
-            display: flex;
+        .nekketsu-container {
+            background-image: url(./images/r08_undou_006_haikei2.jpg);
+            padding: 20px;
+        }
+
+        @media screen and (min-width: 769px) {
+            .nekketsu-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 600px;
+            }
+
+            .nekketsu-image {
+                margin-right: auto;
+                height: 300px !important;
+                width: auto;
+                min-height: 0 !important;
+            }
+
+            .nekketsu-text {
+                width: 70%;
+                display: grid;
+                place-items: center;
+                height: 250px;
+                font-size: 20px;
+            }
         }
 
         .nekketsu-image {
             width: 30%;
-            margin-right: auto;
+            margin: 0 auto;
         }
 
-        .nekketsu-text {}
+        .nekketsu-text {
+            width: 90%;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 0 auto;
+            border: 2px solid rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            padding: 5px;
+        }
 
         .button-text {
             text-align: center;
             margin: 10px 0;
+            text-decoration: underline;
         }
 
         .button-container {
@@ -982,14 +997,17 @@
             font-size: 1em;
             box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.8);
             margin: 7px auto;
-            width: calc(100%/6);
-            writing-mode: vertical-lr;
+            width: calc(100% / 6);
             height: 160px;
-        }
 
-        .button1:hover {
-            color: #fff;
-            opacity: 0.6;
+            writing-mode: vertical-lr;
+            text-align: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            box-sizing: border-box;
         }
 
         .button2 {
@@ -999,9 +1017,17 @@
             font-size: 1em;
             box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.8);
             margin: 7px auto;
-            width: calc(100%/6);
-            writing-mode: vertical-lr;
+            width: calc(100% / 6);
             height: 160px;
+
+            writing-mode: vertical-lr;
+            text-align: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            box-sizing: border-box;
         }
 
         .button1:hover,
@@ -1115,25 +1141,38 @@
         @media screen and (min-width: 769px) {
             .soumu {
                 width: 100%;
-                font-size: 1rem;
+                font-size: 1.2rem;
             }
         }
 
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 1050px) {
+
             .soumu {
-                font-size: 1rem;
+                font-size: 1.2rem;
                 -ms-writing-mode: tb-rl;
-                -webkit-column-count: 2;
-                -webkit-column-fill: auto;
-                -webkit-column-gap: 16px;
                 -webkit-writing-mode: vertical-rl;
-                column-count: 2;
-                column-fill: auto;
-                column-gap: 16px;
-                height: 660px;
-                width: 100%;
                 writing-mode: vertical-rl;
+
+                -webkit-column-count: 2;
+                column-count: 2;
+
+                -webkit-column-fill: balance;
+                column-fill: balance;
+
+                -webkit-column-gap: 16px;
+                column-gap: 16px;
+
+                height: auto;
+                max-height: 620px;
+                width: 100%;
+                max-width: 100%;
+
+                overflow: hidden;
             }
+        }
+
+        .program-page {
+            padding-bottom: 20px;
         }
 
         .program-caution {
@@ -1157,13 +1196,35 @@
 
         }
 
-        .program-box {
+        @media screen and (max-width: 768px) {
+            .pconly {
+                display: flex;
+                padding: 5px;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+                border-top: solid 1px #000000;
+                display: none;
+            }
+        }
+
+        .program-box1 {
             display: flex;
             padding: 5px;
             justify-content: center;
             align-items: center;
             font-size: 20px;
             border-top: solid 1px #000000;
+        }
+
+        .program-box2 {
+            display: flex;
+            padding: 5px;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            border-top: solid 1px #000000;
+            background-color: #cccccc;
         }
 
         .program-text {
@@ -1549,6 +1610,7 @@
         .kaijozu {
             display: block;
             margin: 0 auto;
+            width: fit-content;
         }
 
         .googlemap {
@@ -1557,9 +1619,26 @@
         }
 
         footer {
-            padding-top: 15px;
-            background-color: #fff;
-            color: #000;
+            padding: 15px 0;
+            background-color: #333333;
+            color: #fff;
+            text-align: center;
+        }
+
+
+        .footer-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-title-text {
+            margin: auto 0;
+        }
+
+        .shuyu-link {
+            color: #fff;
+            text-decoration: underline;
         }
 
         /* ここからリセットcss  */
@@ -1586,7 +1665,7 @@
             font-family: sans-serif;
             font-size: 16px;
             color: #000000;
-            line-height: 1;
+            line-height: 1.5;
             background-color: #ffffff;
         }
 
