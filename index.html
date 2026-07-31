@@ -109,8 +109,8 @@
                 </div>
             </div>
 
-            <div class="kantogen-box">
-                <img class="kantogen-photo-soumu" src="./images/r08_undou_004_kancho.jpg" alt="運営委員長の写真">
+            <div class="kantogen-box-soumu">
+                <img class="kantogen-photo-soumu" src="./images/r08_undou_004_kancho.jpg" alt="総務の写真">
                 <div class="kantogen-text-soumu">
                     <span class="name">浦野子虎</span>
                     <span class="yakushoku">総務</span>
@@ -1065,6 +1065,27 @@
                 0 1px 2px rgba(33, 37, 41, 0.25),
                 4px 6px 14px rgba(33, 37, 41, 0.35);
             margin: 12px 10px;
+            height: auto;
+        }
+
+        .kantogen-box-soumu {
+            display: flex;
+            gap: 20px;
+            padding: 10px;
+            background-color: rgba(179, 242, 221, 0.5);
+            border-radius: 7px;
+            border: 1px solid rgba(33, 37, 41, 0.25);
+            box-shadow:
+                0 1px 2px rgba(33, 37, 41, 0.25),
+                4px 6px 14px rgba(33, 37, 41, 0.35);
+            margin: 12px 10px;
+            height: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .kantogen-box-soumu {
+                min-height: 800px;
+            }
         }
 
         .kantogen-photo {
@@ -1114,6 +1135,11 @@
                 align-items: center;
             }
 
+            .kantogen-box-soumu {
+                flex-direction: column;
+                align-items: center;
+            }
+
             .kantogen-photo {
                 width: 80%;
                 max-width: 320px;
@@ -1137,7 +1163,7 @@
         .soumu {
             writing-mode: vertical-rl;
             width: fit-content;
-            font-size: 1.1rem;
+            font-size: 15px;
         }
 
         @media screen and (min-width: 769px) {
@@ -1147,7 +1173,6 @@
         }
 
         @media screen and (max-width: 1050px) {
-
             .soumu {
                 -ms-writing-mode: tb-rl;
                 -webkit-writing-mode: vertical-rl;
@@ -1162,12 +1187,13 @@
                 -webkit-column-gap: 16px;
                 column-gap: 16px;
 
-                height: auto;
-                max-height: 620px;
+                /* height, max-height は削除(JSで動的設定) */
                 width: 100%;
                 max-width: 100%;
 
                 overflow: hidden;
+                height: 700px;
+                /* 念のため残す(通常はJSで正しく収まるので発動しない) */
             }
         }
 
@@ -1196,11 +1222,7 @@
 
         }
 
-        @media screen and (max-width: 768px) {
-            .pconly {
-                display: none;
-            }
-        }
+        
 
         .pconly {
             display: flex;
@@ -1209,6 +1231,12 @@
             align-items: center;
             font-size: 20px;
             border-top: solid 1px #000000;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .pconly {
+                display: none;
+            }
         }
 
         .program-box1 {
