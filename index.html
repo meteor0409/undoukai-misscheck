@@ -27,8 +27,6 @@
             </div>
             <div class="day">
                 <p><span>2026</span>年<span>9</span>月<span>5</span>日<small>(土)</small>
-                    <br>
-                    <small><small>予備日 <span>9</span>月<span>6</span>日<small>(日)</small></small></small>
                 </p>
             </div>
 
@@ -47,7 +45,7 @@
 
                 function countdown() {
                     const now = new Date(); // 現在時刻を取得
-                    const target = new Date(2026, 8, 5, 0, 0, 0); // 2026年9月5日 0:00
+                    const target = new Date(2026, 8, 5, 8, 0, 0); // 2026年9月5日 8:00
                     const diff = target.getTime() - now.getTime(); // 時間の差を取得（ミリ秒）
 
                     if (diff <= 0) {
@@ -76,7 +74,7 @@
                 <div class="message button1">大運動会によせて</div>
                 <div class="program button2">プログラム</div>
                 <div class="blockpage button1">ブロック紹介</div>
-                <div class="match button2">競技</div>
+                <div class="match button2">競技紹介</div>
                 <div class="map button1">マップ・会場図</div>
             </div>
         </div>
@@ -165,98 +163,114 @@
             <div class="program-container">
                 <div class="program-line-1">
                     <div class="program-box1">
-                        <p class="program-chousei">プログラム</p>
+                        <p class="program-bangou">番号</p>
                         <p class="program-chousei">開始時間</p>
+                        <p class="program-chousei">プログラム</p>
                     </div>
                     <div class="program-box2">
-                        <p class="program-chousei">開会式</p>
+                        <p class="program-bangou">1</p>
                         <p class="program-chousei">8:00</p>
+                        <p class="program-chousei">開会式</p>
                     </div>
                     <div class="program-box1">
-                        <p class="program-chousei">陸上α</p>
+                        <p class="program-bangou">2</p>
                         <p class="program-chousei">8:25</p>
+                        <p class="program-chousei">陸上α</p>
                     </div>
                     <div class="program-box2">
-                        <p class="program-chousei">棒引き 予選</p>
+                        <p class="program-bangou">3</p>
                         <p class="program-chousei">8:43</p>
+                        <p class="program-chousei">棒引き 予選</p>
                     </div>
                     <div class="program-box1">
-                        <p class="program-chousei">タンブリング</p>
+                        <p class="program-bangou">4</p>
                         <p class="program-chousei">8:55</p>
+                        <p class="program-chousei">タンブリング</p>
                     </div>
                     <div class="program-box2">
-                        <p class="program-chousei">大帽走</p>
+                        <p class="program-bangou">5</p>
                         <p class="program-chousei">9:32</p>
+                        <p class="program-chousei">大帽走</p>
                     </div>
                     <div class="program-box1">
-                        <p class="program-chousei">棒倒し 予選</p>
+                        <p class="program-bangou">6</p>
                         <p class="program-chousei">9:49</p>
+                        <p class="program-chousei">棒倒し 予選</p>
                     </div>
                     <div class="program-box2">
-                        <p class="program-chousei">創作ダンス</p>
+                        <p class="program-bangou">7</p>
                         <p class="program-chousei">10:01</p>
+                        <p class="program-chousei">創作ダンス</p>
                     </div>
                     <div class="program-box1">
-                        <p class="program-chousei">綱引き 予選</p>
+                        <p class="program-bangou">8</p>
                         <p class="program-chousei">10:28</p>
+                        <p class="program-chousei">綱引き 予選</p>
                     </div>
                     <div class="program-box2">
-                        <p class="program-chousei">騎馬戦 予選</p>
+                        <p class="program-bangou">9</p>
                         <p class="program-chousei">10:57</p>
+                        <p class="program-chousei">騎馬戦 予選</p>
                     </div>
-                    <div class="program-box1 program-tokubetsu">
-                        <p class="program-chousei">エール</p>
+                    <div class="program-box1">
+                        <p class="program-bangou">10</p>
                         <p class="program-chousei">11:14</p>
-                    </div>
-                </div>
-                <div class="program-line-2">
-                    <div class="pconly">
-                        <p class="program-chousei">プログラム</p>
-                        <p class="program-chousei">開始時間</p>
+                        <p class="program-chousei">エール</p>
                     </div>
                     <div class="program-box2">
-                        <p class="program-chousei">１昼</p>
+                        <p class="program-bangou">11</p>
                         <p class="program-chousei">11:45</p>
+                        <p class="program-chousei">1昼(休憩)</p>
                     </div>
                     <div class="program-box1">
-                        <p class="program-chousei">中間発表</p>
+                        <p class="program-bangou">12</p>
                         <p class="program-chousei">12:34</p>
+                        <p class="program-chousei">中間発表</p>
                     </div>
                     <div class="program-box2">
-                        <p class="program-chousei oukonchousei">応援コンテスト</p>
+                        <p class="program-bangou">13</p>
                         <p class="program-chousei">12:35</p>
+                        <p class="program-chousei oukonchousei">応援コンテスト</p>
                     </div>
                     <div class="program-box1">
-                        <p class="program-chousei">騎馬戦 決勝</p>
+                        <p class="program-bangou">14</p>
                         <p class="program-chousei">13:22</p>
+                        <p class="program-chousei">騎馬戦 決勝</p>
                     </div>
                     <div class="program-box2">
-                        <p class="program-chousei">綱引き 決勝</p>
+                        <p class="program-bangou">15</p>
                         <p class="program-chousei">13:44</p>
+                        <p class="program-chousei">綱引き 決勝</p>
                     </div>
                     <div class="program-box1">
-                        <p class="program-chousei">２昼</p>
+                        <p class="program-bangou">16</p>
                         <p class="program-chousei">13:59</p>
+                        <p class="program-chousei">2昼(休憩)</p>
                     </div>
                     <div class="program-box2">
-                        <p class="program-chousei">陸上β</p>
+                        <p class="program-bangou">17</p>
                         <p class="program-chousei">14:32</p>
+                        <p class="program-chousei">陸上β</p>
                     </div>
                     <div class="program-box1">
-                        <p class="program-chousei">棒引き 決勝</p>
+                        <p class="program-bangou">18</p>
                         <p class="program-chousei">14:59</p>
+                        <p class="program-chousei">棒引き 決勝</p>
                     </div>
                     <div class="program-box2">
-                        <p class="program-chousei">棒倒し 決勝</p>
+                        <p class="program-bangou">19</p>
                         <p class="program-chousei">15:13</p>
+                        <p class="program-chousei">棒倒し 決勝</p>
                     </div>
                     <div class="program-box1">
-                        <p class="program-chousei">陸上γ</p>
+                        <p class="program-bangou">20</p>
                         <p class="program-chousei">15:25</p>
+                        <p class="program-chousei">陸上γ</p>
                     </div>
                     <div class="program-box2">
-                        <p class="program-chousei">閉会式</p>
+                        <p class="program-bangou">21</p>
                         <p class="program-chousei">15:40</p>
+                        <p class="program-chousei">閉会式</p>
                     </div>
                 </div>
             </div>
@@ -267,6 +281,7 @@
                 <h2 class="block-title red">
                     RED
                 </h2>
+                <img class="back-1st" src="">
                 <p class="block-class">
                     3-4 3-9 2-2 2-8 2-10 1-1 1-4 1-10
                 </p>
@@ -276,15 +291,12 @@
                     </p>
                     <p class="blockreader-name">ブロック長 3-4 原口宙斗</p>
                 </div>
-                <img class="back-1st" src="">
                 <div class="block-theme">
                     <h2 class="slogan-block">
                         <ruby>爀越<rt>かくえつ</rt></ruby>
                     </h2>
                     <div class="slogan-text">
-                        このスローガンには「赤ブロック全員でどんな困難も乗り越えていく」という意味が込められている。世の中のあらゆるものが廃れて淘汰されていく時代。『
-                        確越』
-                        歴代最高にふさわしい大運動会を必ず創り上げる。
+                        このスローガンには「赤ブロック全員でどんな困難も乗り越えていく」という意味が込められている。世の中のあらゆるものが廃れて淘汰されていく時代。『<ruby>確越<rt>かくえつ</rt></ruby>』歴代最高にふさわしい大運動会を必ず創り上げる。
                     </div>
                 </div>
                 <div class="block-theme">
@@ -292,7 +304,7 @@
                         <ruby>熾拳<rt>れっけん</rt></ruby>
                     </h2>
                     <div class="slogan-text">
-                        自ら道を切り拓かずとも、誰かや何かの光で生きられるこの時代。その中でおれたちがタンブリングをする意味。「熾拳」には、何も持たず己の力だけで挑む「赤手空拳」の精神を込めた。燃え盛る炎のような情熱と揺るがぬ闘志を胸に、仲間とともに限界を超え、道なき世界を紅創し、切り拓く。赤ブロ男児の勇姿をご覧あれ。
+                        自ら道を切り拓かずとも、誰かや何かの光で生きられるこの時代。その中で俺たちがタンブリングをする意味。「熾拳」には、何も持たず己の力だけで挑む「<ruby>赤手空拳<rt>せきしゅくうけん</rt></ruby>」の精神を込めた。燃え盛る炎のような情熱と揺るがぬ闘志を胸に、仲間とともに限界を越え、道なき世界を紅創し、切り拓く。赤ブロ男児の勇姿をご覧あれ。
                     </div>
                 </div>
                 <div class="block-theme">
@@ -316,7 +328,7 @@
                         <ruby>衆熾成城<rt>しゅうしせいじょう</rt></ruby>
                     </h2>
                     <div class="slogan-text">
-                        自ら道を切り拓かずとも、誰かや何かの光で生きられるこの時代。その中でおれたちがタンブリングをする意味。「熾拳」には、何も持たず己の力だけで挑む「赤手空拳」の精神を込めた。燃え盛る炎のような情熱と揺るがぬ闘志を胸に、仲間とともに限界を超え、道なき世界を紅創し、切り拓く。赤ブロ男児の勇姿をご覧あれ。
+                        空白
                     </div>
                 </div>
             </div>
@@ -355,7 +367,7 @@
                         咲き継ぐ白百合<br><small><small>~潜伏キリシタン250年の軌跡~</small></small>
                     </h2>
                     <div class="slogan-text">
-                        250年の弾圧を耐え抜き次世代へ願いを託した潜伏キリシタンの少女たち。厳しい冬を越え春に咲く白百合のように、いつか堂々と生きられる日を信じ続けた姿を表現します。どんな困難が立ちはばかっても希望を失わず生き抜く強さ、自分の信じるものを大切にする尊さ、自由を手に入れ、自分らしく生きられる喜びを伝えます。
+                        250年の弾圧を耐え抜き次世代へ願いを託した潜伏キリシタンの少女たち。厳しい冬を越え春に咲く白百合のように、いつか堂々と生きられる日を信じ続けた姿を表現します。どんな困難が立ちはだかっても希望を失わず生き抜く強さ、自分の信じるものを大切にする尊さ、自由を手に入れ、自分らしく生きられる喜びを伝えます。
                     </div>
                 </div>
                 <div class="block-theme">
@@ -371,7 +383,7 @@
                         <ruby>皎証<rt>こうしょう</rt></ruby>
                     </h2>
                     <div class="slogan-text">
-                        「穿雲」とは困難を打ち破り、過去最高のタンブリングを歴史に刻む決意である。時代がタンブを淘汰しつつある今だからこそ、俺たち自身が時代を創っていく覚悟を示す。不屈の努力を積み重ねた者だけが見える景色がある。その高みへと力強く「飛翔」し、「優勝」を掴み取る。白の漢達が今、白翼を翻す。
+                        空白
                     </div>
                 </div>
             </div>
@@ -384,7 +396,7 @@
                 </p>
                 <div class="blockreader-introduction block-theme">
                     <p>
-                        目指すは完全優勝。どんなときも俺についてこい。
+                        空白
                     </p>
                     <p class="blockreader-name">ブロック長 3-3 黒澤生真</p>
                 </div>
@@ -395,7 +407,7 @@
                         <ruby>真濤<rt>しんどう</rt></ruby>
                     </h2>
                     <div class="slogan-text">
-                        大運動会を通してブロック全員が真の自分の姿を見つけ出し、これまでより大きな力を出せば、それは大きな濤となり青に染める。
+                        大運動会を通してブロック全員が真の自分の姿を見つけ出し、これまでより大きな力を出せば、それは大きな<ruby>濤<rt>なみ</rt></ruby>となり青に染める。
                     </div>
                 </div>
                 <div class="block-theme">
@@ -408,10 +420,10 @@
                 </div>
                 <div class="block-theme">
                     <h2 class="slogan-dance">
-                        Titanic<br><small><small>~永遠に変わらない愛~</small></small>
+                        Titanic<br><small><small>~永遠に沈まない愛~</small></small>
                     </h2>
                     <div class="slogan-text">
-                        タイタニック号、それは、数奇な運命に翻弄された愛と悲劇の舞台。処女航海の船内では、愛や信頼関係である絆と、言動や心を縛る絆が交錯していた。タイタニック号は巨大な氷山との衝突を避けられず、沈没する。残された者たちは深い悲しみの中で葛藤しながらも、命を託してくれた人々の想いを胸に、生きることを決意する。
+                        タイタニック号、それは、数奇な運命に翻弄された愛と悲劇の舞台。処女航海の船内では、愛や信頼関係であるきずなと、言動や心を縛るほだしが交錯していた。タイタニック号は巨大な氷山との衝突を避けられず、沈没する。残された者たちは深い悲しみの中で葛藤しながらも、命を託してくれた人々の想いを胸に、生きることを決意する。
                     </div>
                 </div>
                 <div class="block-theme">
@@ -458,16 +470,16 @@
                         <ruby>軌昴<rt>きぼう</rt></ruby>
                     </h2>
                     <div class="slogan-text">
-                        昴とは、数々の星が集まりひときわ強く、美しく輝く星団である。一つになるという意味の「統ばる」に由来し、まさに集団で技を成すタンブリングそのものだ。我々の可能性は宇宙のように無限大であり、いかなる困難においても確かな希望を宿す。先人たちのタンブリングの軌跡を重んじ、自らの輝きと共に黄男児が今統ばる。
+                        <ruby>昴<rt>すばる</rt></ruby>とは、数々の星が集まりひときわ強く、美しく輝く星団である。一つになるという意味の「<ruby>統<rt>す</rt></ruby>ばる」に由来し、まさに集団で技を成すタンブリングそのものだ。我々の可能性は宇宙のように無限大であり、いかなる困難においても確かな希望を宿す。先人たちのタンブリングの軌跡を重んじ、自らの輝きと共に黄男児が今<ruby>統<rt>す</rt></ruby>ばる。
                     </div>
                 </div>
                 <div class="block-theme">
                     <h2 class="slogan-dance">
-                        KING OF POP<br><small><small>~Become a star that keeps shining~</small></small>
+                        KING OF POP<br><small><small>~Keep the Shine Alive~</small></small>
                     </h2>
                     <div class="slogan-text">
-                        KING OF POP―
-                        。今もなお世界中で語り継がれているマイケル・ジャクソンには、輝かしい栄光の裏に隠された、多くの苦悩に苛まれながらも、音楽を通して世界を癒そうとし続けた生き様があった。これからの時代を創っていく私たちこそが彼の想いを受け継ぎ、どんな困難にも立ち向かい、強く輝き続けていく。
+                        KING OF POP―—
+                        。今もなお世界中で語り継がれているマイケル・ジャクソンには、輝かしい栄光の裏に隠された多くの苦悩に苛まれながらも、音楽を通して世界を癒そうとし続けた生き様があった。これからの時代を創っていく私たちこそが彼の想いを受け継ぎ、どんな困難にも立ち向かい、強く輝き続けていく。
                     </div>
                 </div>
                 <div class="block-theme">
@@ -483,7 +495,7 @@
                         <ruby>黄金<rt>おうごん</rt></ruby>
                     </h2>
                     <div class="slogan-text">
-                        黄ブロック全体スローガン「明星」が表す金星の星言葉「愛」と「調和」を込め、全体テーマを「黄金」とした。黄金には物事が最も輝き、最高潮に達した状態という意味がある。一人一人が応コンを愛し、仲間と支え合いながら人生で最も輝く瞬間を創るとともに、努力や絆が色褪せることなく歴史に残る黄魂を魅せる。
+                        黄ブロック全体スローガン「明星」が表す金星の星言葉「愛」と「調和」を込め、全体テーマを「黄金」とした。黄金には物事が最も輝き、最高潮に達した状態という意味がある。一人一人が応コンを愛し、仲間と支え合いながら人生で最も輝く瞬間を創るとともに、努力や絆が色褪せることなく歴史に残る<ruby>黄魂<rt>おうこん</rt></ruby>を魅せる。
                     </div>
                 </div>
             </div>
@@ -497,7 +509,7 @@
                         <p class="match-title">タンブリング</p>
                         <img class="match-image" src="">
                     </div>
-                    <img class="match-image-picture" src="">
+                    <img class="match-image-picture" src="./images/r08_undou_007_tanbu.JPG">
                     <div class="match-text">
                         <p>盛夏に包まれるここ修猷館で、漢達の「熱結」が体現される。各ブロックが4タワー、7ピラ等の大技に込めた想いを、いざ刮目せよ。</p>
                     </div>
@@ -508,9 +520,9 @@
                         <p class="match-title">創作ダンス</p>
                         <img class="match-image" src="">
                     </div>
-                    <img class="match-image-picture" src="">
+                    <img class="match-image-picture" src="./images/r08_undou_008_dance.JPG">
                     <div class="match-text">
-                        <p>ダンスが苦手得意に関わらず、ブロックの女子全体が一体となって、テーマを体現する競技です。</p>
+                        <p>ダンスが得意な人も、苦手な人も、ブロックの女子全員が一体となって、テーマを体現する競技です。</p>
                     </div>
                 </div>
                 <div class="match-block">
@@ -519,21 +531,21 @@
                         <p class="match-title">応援コンテスト</p>
                         <img class="match-image" src="">
                     </div>
-                    <img class="match-image-picture" src="">
+                    <img class="match-image-picture" src="./images/r08_undou_009_oukon.JPG">
                     <div class="match-text">
                         <p>唯一、ブロック生全員が参加できる競技。四色のパネルを操作し、絵や言葉を歌と共に表現する。ブロック生全員の熱量に心動かされること間違いなし！特パネや迫力満点のバックにもご注目。</p>
                     </div>
                 </div>
                 <div class="match-block">
                     <p class="program-time">
-                        9:49予選開始<br>
+                        10:28予選開始<br>
                         13:44決勝開始
                     </p>
                     <div class="match-title-container">
                         <p class="match-title">綱引き</p>
                         <img class="match-image" src="">
                     </div>
-                    <img class="match-image-picture" src="">
+                    <img class="match-image-picture" src="./images/r08_undou_010_tsuna.JPG">
                     <div class="match-text">
                         <p>各ブロック男女80人と最後尾のアンカーマンで綱を引く。「音頭取り」や「旗持ち」の声が、その力をもっと強くする！大迫力の団体戦に目が離せない！</p>
                     </div>
@@ -547,7 +559,7 @@
                         <p class="match-title">騎馬戦</p>
                         <img class="match-image" src="">
                     </div>
-                    <img class="match-image-picture" src="">
+                    <img class="match-image-picture" src="./images/r08_undou_011_kiba.JPG">
                     <div class="match-text">
                         <p>16騎vs16騎。80人vs80人。各ブロックの作戦、スキル、団結力、熱意が勝敗を決定づける白熱の競技である騎馬戦。いざ、ルビコン川を渡れ、修猷生。</p>
                     </div>
@@ -561,7 +573,7 @@
                         <p class="match-title">棒引き</p>
                         <img class="match-image" src="">
                     </div>
-                    <img class="match-image-picture" src="">
+                    <img class="match-image-picture" src="./images/r08_undou_012_bouhiki.JPG">
                     <div class="match-text">
                         <p>12本の棒を自陣に引き合う。1本1本の棒が勝敗を左右する！さらに、真ん中にあるスペシャル棒は得点が高い！全ての棒で繰り広げられる熱戦を見逃すな！</p>
                     </div>
@@ -575,9 +587,9 @@
                         <p class="match-title">棒倒し</p>
                         <img class="match-image" src="">
                     </div>
-                    <img class="match-image-picture" src="">
+                    <img class="match-image-picture" src="./images/r08_undou_013_boutaoshi.JPG">
                     <div class="match-text">
-                        <p>１、２年男子が攻撃と守備に分かれ、自分のブロックの棒を守りながらも、相手ブロックの陣地にある棒を先に倒して勝利を手に入れるこの熱い戦いが今、幕を開ける。</p>
+                        <p>1,2年男子が攻撃と守備に分かれ、自分のブロックの棒を守りながらも、相手ブロックの陣地にある棒を先に倒して勝利を手に入れる。この熱い戦いが今、幕を開ける。</p>
                     </div>
                 </div>
                 <div class="match-block">
@@ -586,9 +598,9 @@
                         <p class="match-title">大帽走</p>
                         <img class="match-image" src="">
                     </div>
-                    <img class="match-image-picture" src="">
+                    <img class="match-image-picture" src="./images/r08_undou_014_daibousou.JPG">
                     <div class="match-text">
-                        <p>１、２年女子が、縄を跳び、大きな帽子をバトン代わりにして繋ぐ10人11脚リレー。最後は大帽走大幹２人とブロック長が走る。息のあった走りが勝利への1歩となる！</p>
+                        <p>1,2年女子が、縄を跳び、大きな帽子をバトン代わりにして繋ぐ10人11脚リレー。最後は大帽走大幹２人とブロック長が走る。息のあった走りが勝利への1歩となる！</p>
                     </div>
                 </div>
                 <div class="match-block">
@@ -597,7 +609,7 @@
                         <p class="match-title">陸上α</p>
                         <img class="match-image" src="">
                     </div>
-                    <img class="match-image-picture" src="">
+                    <img class="match-image-picture" src="./images/r08_undou_015_alpha.JPG">
                     <div class="match-text">
                         <p>ただ速く駆け抜けるのではない。背負うのは、ともに汗を流した日々の記憶と、背中に受ける仲間の視線。火花散るフィールドの上、情熱を勝利へと結ぶための、果てなき旅路がここから始まる。</p>
                     </div>
@@ -608,9 +620,9 @@
                         <p class="match-title">陸上β</p>
                         <img class="match-image" src="">
                     </div>
-                    <img class="match-image-picture" src="">
+                    <img class="match-image-picture" src="./images/r08_undou_016_beta.JPG">
                     <div class="match-text">
-                        <p>目の前に立ちはだかる壁、不意に足元をすくう罠。それはまるで、私たちが歩む人生そのもの。二兎も三兎とも追う修猷生、どう魅せてくれるのか。</p>
+                        <p>目の前に立ちはだかる壁、不意に足元をすくう罠。それはまるで、私たちが歩む人生そのもの。二兎も三兎も追う修猷生、どう魅せてくれるのか。</p>
                     </div>
                 </div>
                 <div class="match-block">
@@ -619,7 +631,7 @@
                         <p class="match-title">陸上γ</p>
                         <img class="match-image" src="">
                     </div>
-                    <img class="match-image-picture" src="">
+                    <img class="match-image-picture" src="./images/r08_undou_017_gamma.JPG">
                     <div class="match-text">
                         <p>一瞬の疾走を、永遠の歓声へ。ブロックの想いが熱結したバトンは、ブロ長へと繋がる。勝利の行く末を定める、運命のラストラン。</p>
                     </div>
@@ -630,9 +642,9 @@
                         <p class="match-title">エール</p>
                         <img class="match-image" src="">
                     </div>
-                    <img class="match-image-picture" src="">
+                    <img class="match-image-picture" src="./images/r08_undou_018_yell.JPG">
                     <div class="match-text">
-                        <p>演舞の「エーラー」とチアの「エールっこ」が、２か月かけて作り上げた完成度の高いエールで選手たちを応援。エーラーの迫真の演舞や鬼気迫る表情、エールっこの軽やかなダンスやはじける笑顔に心を動かされること間違いなし！
+                        <p>演舞の「エーラー」とチアの「エールっこ」が、2か月かけて作り上げた完成度の高いエールで選手たちを応援。エーラーの迫真の演舞や鬼気迫る表情、エールっこの軽やかなダンスやはじける笑顔に心を動かされること間違いなし！
                         </p>
                     </div>
                 </div>
@@ -640,14 +652,14 @@
         </div>
         <div class="map-page page">
             <h1 class="section-midashi">マップ・会場図</h1>
+            <div class="kaijozu">
+                <img src="./images/r08_undou_005_kaijozu.png">
+            </div>
             <iframe class="googlemap"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.8249999960913!2d130.356341!3d33.5838927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354193a435436e39%3A0x27c45e52483debbe!2z56aP5bKh55yM56uL5L-u54y36aSo6auY562J5a2m5qCh!5e0!3m2!1sja!2sjp!4v1766908186345!5m2!1sja!2sjp"
                 width="80%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
-            <div class="kaijozu">
-                <img src="./images/r08_undou_005_kaijozu.png">
-            </div>
         </div>
         <script src="https://code.jquery.com/jquery.min.js"></script>
         <script>
@@ -772,7 +784,7 @@
         <p>&copy;第79回修猷大運動会運営委員会広報部署</p>
         <p>
             福岡県立修猷館高等学校<br>
-            〒814-8510 福岡県福岡市早良区西新６丁目１−１０
+            〒814-8510 福岡県福岡市早良区西新6丁目1-10
         </p>
         <a class="shuyu-link" href="https://shuyu.fku.ed.jp">修猷館高等学校のページはこちら</a>
     </footer>
@@ -804,6 +816,7 @@
             background: #a007e2;
             border-radius: 50%;
             opacity: 0.6;
+            z-index: 100;
         }
 
         /* Font Awesome */
@@ -859,7 +872,6 @@
         }
 
         .main-header {
-            height: calc(100vh - 80px);
             background-image: url(./images/r08_undou_002_haikei1.jpg);
             background-repeat: no-repeat;
             /* 背景画像を繰り返し表示させない */
@@ -868,6 +880,8 @@
             background-position: center;
             /* 背景画像の表示位置を中央に */
             z-index: 1;
+            background-size: cover;
+            padding-bottom: 30px;
         }
 
         .day {
@@ -941,6 +955,7 @@
         .nekketsu-container {
             background-image: url(./images/r08_undou_006_haikei2.jpg);
             padding: 20px;
+            background-size: cover;
         }
 
         @media screen and (min-width: 769px) {
@@ -984,7 +999,6 @@
         .button-text {
             text-align: center;
             margin: 10px 0;
-            text-decoration: underline;
         }
 
         .button-container {
@@ -1212,31 +1226,8 @@
         }
 
         .program-line-1 {
-            width: 40%;
-            margin-left: auto;
-        }
-
-        .program-line-2 {
-            width: 40%;
-            margin-right: auto;
-
-        }
-
-        
-
-        .pconly {
-            display: flex;
-            padding: 5px;
-            justify-content: center;
-            align-items: center;
-            font-size: 20px;
-            border-top: solid 1px #000000;
-        }
-        
-        @media screen and (max-width: 768px) {
-            .pconly {
-                display: none;
-            }
+            width: 80%;
+            margin: 0 auto;
         }
 
         .program-box1 {
@@ -1273,7 +1264,15 @@
             margin-left: auto;
             margin-right: auto;
             text-align: center;
-            width: 50%;
+            width: 40%;
+            font-size: 1.2rem;
+        }
+
+        .program-bangou {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            width: 20%;
             font-size: 1.2rem;
         }
 
@@ -1320,7 +1319,7 @@
         }
 
         .slogan-text {
-            border: 7px solid #d0ecff;
+            border: 7px solid #FFFFFF;
             padding: 7px;
         }
 
@@ -1335,15 +1334,19 @@
             font-weight: bold;
             font-size: 70px;
             color: #fff;
-            text-shadow:
-                0 0 1px #fff,
-                0 0 20px #cc0022,
-                0 0 10px #cc0022,
-                0 0 10px #ff0055,
-                0 0 60px #ff0040,
-                0 10px 3px #000;
             text-align: center;
             padding-bottom: 15px;
+            text-shadow:
+                0 2px 0 #000,
+                /* 輪郭を締める最小限の影 */
+                0 8px 10px rgba(0, 0, 0, 0.5),
+                /* 浮遊感を出す落下影(距離大・ぼかし大) */
+                0 0 10px #ff0000,
+                /* 赤のグロー(内側) */
+                0 0 20px #ff0000,
+                /* 赤のグロー(外側) */
+                0 0 30px #ff0000;
+            /* 赤のグロー(拡散) */
         }
 
         .block-blue {
@@ -1357,15 +1360,14 @@
             font-weight: bold;
             font-size: 70px;
             color: #fff;
-            text-shadow:
-                0 0 1px #fff,
-                0 0 20px #0022cc,
-                0 0 10px #0022cc,
-                0 0 10px #0055ff,
-                0 0 60px #0040ff,
-                0 10px 3px #000;
             text-align: center;
             padding-bottom: 15px;
+            text-shadow:
+                0 2px 0 #000,
+                0 8px 10px rgba(0, 0, 0, 0.5),
+                0 0 10px #0080ff,
+                0 0 20px #0080ff,
+                0 0 30px #0080ff;
         }
 
         .block-yellow {
@@ -1379,15 +1381,14 @@
             font-weight: bold;
             font-size: 70px;
             color: #fff;
-            text-shadow:
-                0 0 1px #fff,
-                0 0 20px #ccaa00,
-                0 0 10px #ccaa00,
-                0 0 10px #ffd500,
-                0 0 60px #ffbf00,
-                0 10px 3px #000;
             text-align: center;
             padding-bottom: 15px;
+            text-shadow:
+                0 2px 0 #000,
+                0 8px 10px rgba(0, 0, 0, 0.5),
+                0 0 10px #ffdd00,
+                0 0 20px #ffdd00,
+                0 0 30px #ffdd00;
         }
 
 
@@ -1402,15 +1403,14 @@
             font-weight: bold;
             font-size: 70px;
             color: #fff;
-            text-shadow:
-                0 0 1px #fff,
-                0 0 20px #cccccc,
-                0 0 10px #cccccc,
-                0 0 10px #ffffff,
-                0 0 60px #f0f0ff,
-                0 10px 3px #000;
             text-align: center;
             padding-bottom: 15px;
+            text-shadow:
+                0 2px 0 #000,
+                0 8px 10px rgba(0, 0, 0, 0.5),
+                0 0 10px #ffffff,
+                0 0 20px #ffffff,
+                0 0 30px #ffffff;
         }
 
         .block-red {
@@ -1422,7 +1422,7 @@
             text-align: center;
             padding: 5px 0;
             font-weight: bold;
-            border-bottom: 4px solid #d0ecff;
+            border-bottom: 4px solid #FFFFFF;
             width: 80%;
             margin: 0 auto;
         }
@@ -1433,14 +1433,14 @@
         }
 
         .blockreader-introduction {
-            border: 7px solid #d0ecff;
+            border: 7px solid #FFFFFF;
             padding: 7px;
         }
 
         .slogan-block {
             position: relative;
             color: black;
-            background: #d0ecff;
+            background: #FFFFFF;
             line-height: 1.4;
             padding: 0.25em 0.5em;
             margin-bottom: -10px;
@@ -1455,8 +1455,8 @@
             font-family: "Font Awesome 5 Free", 'Quicksand', 'Avenir', 'Arial', sans-serif;
             font-weight: 900;
             content: 'ブロックスローガン';
-            background: #2196F3;
-            color: #fff;
+            background: #E8DCC8;
+            color: #2E2418;
             left: 0px;
             bottom: 100%;
             border-radius: 5px 5px 0 0;
@@ -1469,7 +1469,7 @@
         .slogan-tanb {
             position: relative;
             color: black;
-            background: #d0ecff;
+            background: #FFFFFF;
             line-height: 1.4;
             padding: 0.25em 0.5em;
             border-radius: 0 5px 5px 5px;
@@ -1484,8 +1484,8 @@
             font-family: "Font Awesome 5 Free", 'Quicksand', 'Avenir', 'Arial', sans-serif;
             font-weight: 900;
             content: 'タンブリングテーマ';
-            background: #2196F3;
-            color: #fff;
+            background: #E8DCC8;
+            color: #2E2418;
             left: 0px;
             bottom: 100%;
             border-radius: 5px 5px 0 0;
@@ -1498,7 +1498,7 @@
         .slogan-dance {
             position: relative;
             color: black;
-            background: #d0ecff;
+            background: #FFFFFF;
             line-height: 1.4;
             padding: 0.25em 0.5em;
             border-radius: 0 5px 5px 5px;
@@ -1513,8 +1513,8 @@
             font-family: "Font Awesome 5 Free", 'Quicksand', 'Avenir', 'Arial', sans-serif;
             font-weight: 900;
             content: 'ダンステーマ';
-            background: #2196F3;
-            color: #fff;
+            background: #E8DCC8;
+            color: #2E2418;
             left: 0px;
             bottom: 100%;
             border-radius: 5px 5px 0 0;
@@ -1527,7 +1527,7 @@
         .slogan-back {
             position: relative;
             color: black;
-            background: #d0ecff;
+            background: #FFFFFF;
             line-height: 1.4;
             padding: 0.25em 0.5em;
             border-radius: 0 5px 5px 5px;
@@ -1542,8 +1542,8 @@
             font-family: "Font Awesome 5 Free", 'Quicksand', 'Avenir', 'Arial', sans-serif;
             font-weight: 900;
             content: 'バックテーマ';
-            background: #2196F3;
-            color: #fff;
+            background: #E8DCC8;
+            color: #2E2418;
             left: 0px;
             bottom: 100%;
             border-radius: 5px 5px 0 0;
@@ -1556,7 +1556,7 @@
         .slogan-oukon {
             position: relative;
             color: black;
-            background: #d0ecff;
+            background: #FFFFFF;
             line-height: 1.4;
             padding: 0.25em 0.5em;
             border-radius: 0 5px 5px 5px;
@@ -1571,8 +1571,8 @@
             font-family: "Font Awesome 5 Free", 'Quicksand', 'Avenir', 'Arial', sans-serif;
             font-weight: 900;
             content: '応援コンテストテーマ';
-            background: #2196F3;
-            color: #fff;
+            background: #E8DCC8;
+            color: #2E2418;
             left: 0px;
             bottom: 100%;
             border-radius: 5px 5px 0 0;
@@ -1653,6 +1653,7 @@
         .googlemap {
             display: block;
             margin: 0 auto !important;
+            padding-bottom: 20px;
         }
 
         footer {
